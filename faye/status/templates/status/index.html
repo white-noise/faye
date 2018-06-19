@@ -1,0 +1,12 @@
+<!-- check if object from view exists, and then display -->
+{% if recent_status %}
+    <ul>
+    {% for status in recent_status %}
+    	<!-- point each status towards its individual page -->
+        <li><a href="{% url 'status:individual' status.id %}">{{ status.status_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+	<!-- edge case -->
+    <p>No statuses are available.</p>
+{% endif %}
