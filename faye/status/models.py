@@ -10,8 +10,10 @@ from django.utils import timezone
 
 class StatusObject(models.Model):
 
-	status_text = models.CharField(max_length=1000)
-	pub_date    = models.DateTimeField('date published')
+	# eventually update the appearance of these in the admin
+	status_title = models.CharField(max_length=200, default="update")
+	status_text  = models.CharField(max_length=1000)
+	pub_date     = models.DateTimeField('date published')
 
 	def recently_published(self):
 		is_recent = self.pub_date >= timezone.now() - datetime.timedelta(days=1)
@@ -19,5 +21,5 @@ class StatusObject(models.Model):
 		return is_recent and is_past
 
 	def __str__(self):
-		# return first 100 chars of status message
-		return self.status_text[:100]
+		# return first 100 chars of status message as identifier
+		return self.status_title
