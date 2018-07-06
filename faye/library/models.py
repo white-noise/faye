@@ -10,7 +10,7 @@ class LibraryObject(models.Model):
 	author      = models.CharField(max_length=200, default="n/a")
 	description = models.CharField(max_length=1000, default="n/a")
 	pub_date    = models.DateTimeField('date published')
-	acq_date    = models.DateTimeField('date acquired')
+	acq_date    = models.DateTimeField('date acquired',default=timezone.now())
 	ISBN_10     = models.CharField(max_length=20, default="n/a")
 	ISBN_13     = models.CharField(max_length=20, default="n/a")
 	pages       = models.IntegerField(default=0)

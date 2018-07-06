@@ -1,0 +1,206 @@
+/*zane marius rossi, 2016*/
+/*to be used for mobile appearance*/
+
+html, body {
+	background-color: black;
+	color: #777;
+	font-family: 'Open Sans', sans-serif;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
+
+a {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #777;
+}
+
+.style-link {
+}
+
+.style-link:hover {
+	cursor:pointer;
+}
+
+li {
+	padding-bottom: 0.5em;
+}
+
+span a{
+	color:#363;
+}
+
+span a:hover{
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	color:#777;
+}
+
+span {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	color: #777;
+	cursor: pointer;
+}
+
+hr {
+	border-color: #333;
+	color: #333;
+	width: 300px;
+}
+
+::selection {
+  background: #787; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #787; /* Gecko Browsers */
+}
+
+.wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+}
+
+.nav {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.main-nav {
+	text-align: center;
+	display: inline-block;
+	font-size: 1em;
+	width: 23%;
+}
+
+.main-nav a:hover {
+	color: #AAA;
+}
+
+.content {
+	margin: auto;
+	width: 90%;
+}
+
+/*for writing list page background*/
+.writing {
+}
+
+.img-insert {
+	width: 100%;
+}
+
+/*for zmr page background*/
+.zmr {
+}
+
+.name-plate {
+	padding-bottom:0px; 
+	position: relative;
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.eig-hr {
+	width: 90%;
+	border-color: #333;
+	color: #333;
+}
+
+.eig-main {
+	padding-top: 200px;
+	width: 100%;
+	margin: auto;
+}
+
+.eig-main a:hover{
+	color: #AAA;
+}
+
+.logo {
+	display: block;
+	margin: auto;
+	width: 300px;
+	height: 144px;
+	background-size: contain;
+	background-image: url("../img/eig.gif");
+	background-repeat: no-repeat;
+}
+
+.heading {
+	color:#AAA;
+	text-align: center;
+	padding-top: 200px;
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+.sub-heading {
+	color:#AAA;
+	text-align: center;
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+.info {
+	color: #777;
+	margin: auto;
+	width: 90%;
+	text-align: left;
+}
+
+.info > li {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.contact {
+	color: #777;
+	margin: auto;
+	width:70%;
+	text-align: center;
+}
+
+.nav-plate {
+	margin: auto;
+	width: 90%;
+	font-size: 1em;
+}
+
+.dual-nav {
+	display: inline-block;
+	width: 40%;
+	padding-bottom: 20px;
+	margin: auto;
+	text-align: center;
+}
+
+.footer {
+	display: none;
+}
