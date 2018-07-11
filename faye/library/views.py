@@ -11,7 +11,7 @@ def index(request):
 
 	author_library = LibraryObject.objects.order_by('title')
 
-	paginator     = Paginator(author_library, 10)
+	paginator     = Paginator(author_library, 8)
 	page          = request.GET.get('page')
 	page_library  = paginator.get_page(page)
 

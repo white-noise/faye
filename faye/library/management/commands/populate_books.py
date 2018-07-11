@@ -16,17 +16,35 @@ class Command(BaseCommand):
 		json_obj  = json.loads(json_data)
 
 		print("populating...")
+		print("")
 
-		# for testing purposes
+		# provisional values (no datetime parsing)
 		for elem in json_obj:
 			authors       = elem["authors"]
 			title         = elem["title"]
 			categories    = elem["categories"]
 			description   = elem["description"]
 			pageCount     = elem["pageCount"]
-			# publishedDate = elem["publishedDate"] # needs parsing
+			publishedDate = elem["publishedDate"] # can parse: elem["publishedDate"].split("-")
 			ISBN_list     = elem["industryIdentifiers"]
 
+			# processing published_date
+			pub_date_split = publishedDate.split("-")
+			date_form      = len(pub_date_split)
+			if date_form   == 1:
+				form = "%Y"
+				publishedDate = datetime.datetime.strptime(publishedDate, form)
+			elif date_form == 2:
+				form = "%Y-%m"
+				publishedDate = datetime.datetime.strptime(publishedDate, form)
+			elif date_form == 3:
+				form = "%Y-%m-%d"
+				publishedDate = datetime.datetime.strptime(publishedDate, form)
+			else:
+				# default case (raise error?)
+				publishedDate = timezone.now()
+
+			# processing ISBN
 			for index in ISBN_list:
 				if index["type"] == "ISBN_10":
 					ISBN_10 = index["identifier"]
@@ -36,13 +54,16 @@ class Command(BaseCommand):
 					ISBN_10 = 0 # default
 					ISBN_13 = 0 # default
 
-			pagesRead     = 0 # default
-			publishedDate = timezone.now()
-			acqDate       = timezone.now() # default
+			pagesRead = 0 # default
+			acqDate   = timezone.now() # default
 
 			# create a book object and save to database
-			book = LibraryObject(title=title, author=authors, description=description, pub_date=publishedDate, acq_date=acqDate, ISBN_10=ISBN_10, ISBN_13=ISBN_13, pages=pageCount, pages_read=pagesRead,)
-			book.save()
+			# book = LibraryObject(title=title, author=authors, description=description, pub_date=publishedDate, acq_date=acqDate, ISBN_10=ISBN_10, ISBN_13=ISBN_13, pages=pageCount, pages_read=pagesRead,)
+			# book.save()
+
+			#####
+			# additional concepts: web link to google books entry
+			#####
 
 			print(authors)
 			print(title)

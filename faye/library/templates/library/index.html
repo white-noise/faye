@@ -93,17 +93,23 @@
 					{% for book in page_library %}
 						<div class="status_text">
 							<li>
-								<span class="status_title">{{ book.title }}:</span>
-								<span>
-									<a href="{% url 'library:individual' book.id %}">{{ book.author }}</a>
+								<span class="status_title">
+									{{ book.title }}
 								</span>
+								<br>
 								<span>
-									<a href="{% url 'library:individual' book.id %}">{{ book.description }}</a>
+									<a href="{% url 'library:individual' book.id %}">
+										{{ book.author }}
+									</a>
+								</span>
+								<br>
+								<span>
+									({{ book.pages_read}}/{{ book.pages }})
 								</span>
 							</li>
 						</div>
 						<div class="status_date">
-							{{ book.pub_date|date:"m/d/y (H:s)" }}
+							{{ book.pub_date|date:"(Y)" }}
 						</div>
 					{% endfor %}
 					<div style="clear: both;"></div>
