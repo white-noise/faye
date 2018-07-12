@@ -10,11 +10,11 @@ from django.utils import timezone
 
 class StatusObject(models.Model):
 
-	# eventually update the appearance of these in the admin
 	status_title = models.CharField(max_length=200, default="update")
-	status_text  = models.CharField(max_length=1000, default="no text")
-	pub_date     = models.DateTimeField('date published')
+	status_text  = models.TextField(max_length=5000, default="no text")
+	pub_date     = models.DateTimeField('date published', default=timezone.now)
+
+	# eventually may want many to many relationship to library objects
 
 	def __str__(self):
-		# return first 100 chars of status message as identifier
 		return self.status_title

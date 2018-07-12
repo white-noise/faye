@@ -138,6 +138,7 @@ hr {
 }
 
 .page_num {
+	color: #333 !important;
 	padding-left: 50px;
 }
 
@@ -152,6 +153,14 @@ hr {
 
 .status_date {
 	float: right;
+}
+
+.status_individual_date {
+	padding-bottom: 0.5em;
+}
+
+.status_individual_text {
+	
 }
 
 .info {

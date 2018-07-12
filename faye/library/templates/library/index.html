@@ -16,7 +16,7 @@
 
 	<!-- CSS -->
 	{% load static %}
-	<link rel="icon" type="image/ico" href="{% static "library/img/green.ico" %}"/>	
+	<link rel="icon" type="image/ico" href="{% static "library/img/green.ico" %}">	
 	<link rel="stylesheet" href="{% static "library/css/mobile.css" %}" media="only screen and (max-width: 400px)" type="text/css">
 	<link rel="stylesheet" href="{% static "library/css/interior.css" %}" media="only screen and (min-width: 401px)" type="text/css">
 	
@@ -101,10 +101,6 @@
 									<a href="{% url 'library:individual' book.id %}">
 										{{ book.author }}
 									</a>
-								</span>
-								<br>
-								<span>
-									({{ book.pages_read}}/{{ book.pages }})
 								</span>
 							</li>
 						</div>

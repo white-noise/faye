@@ -154,6 +154,18 @@ hr {
 	float: right;
 }
 
+.status_individual_text {
+	
+}
+
+.status_individual_author {
+	padding-bottom: 0.5em;
+}
+
+.status_individual_pages_read {
+	padding-bottom: 0.5em;
+}
+
 .info {
 	color: #777;
 	margin: auto;

@@ -16,7 +16,7 @@
 
 	<!-- CSS -->
 	{% load static %}
-	<link rel="icon" type="image/ico" href="{% static "status/img/green.ico" %}"/>	
+	<link rel="icon" type="image/ico" href="{% static "status/img/green.ico" %}">	
 	<link rel="stylesheet" href="{% static "status/css/mobile.css" %}" media="only screen and (max-width: 400px)" type="text/css">
 	<link rel="stylesheet" href="{% static "status/css/interior.css" %}" media="only screen and (min-width: 401px)" type="text/css">
 	
@@ -95,6 +95,8 @@
 							<li>
 								<span class="status_title">{{ status.status_title }}:</span>
 								<span>
+									<!-- can also supply abbreviated text for display (passed in view) -->
+									<!-- i.e., a conditional for if the entire text is displayed or no -->
 									<a href="{% url 'status:individual' status.id %}">{{ status.status_text }}</a>
 								</span>
 							</li>
