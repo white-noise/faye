@@ -62,6 +62,24 @@
 					<p>No status is available.</p>	
 				</div>
 			{% endif %}
+
+			<div style="padding-top:1em;">
+			{% if cited_works %}
+				{% for elem in cited_works %}
+					<span class="status_title">
+						<a href="{% url 'library:individual' elem.pk %}">{{ elem.title }}</a>
+					</span>
+					<span>
+						{{ elem.author }}
+					</span>
+					<br>
+				{% endfor %}
+			{% else %}
+				<div class="info">
+					<p>No citations.</p>	
+				</div>
+			{% endif %}
+			</div>
 			
 			<div class="nav">
 				<a href="{% url 'status:index' %}">back</a>

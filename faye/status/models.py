@@ -14,6 +14,8 @@ class StatusObject(models.Model):
 	status_text  = models.TextField(max_length=5000, default="no text")
 	pub_date     = models.DateTimeField('date published', default=timezone.now)
 
+	cited_works  = models.ManyToManyField('library.LibraryObject', blank=True)
+
 	# eventually may want many to many relationship to library objects
 
 	def __str__(self):

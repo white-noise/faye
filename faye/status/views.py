@@ -28,4 +28,7 @@ def individual(request, status_id):
 
 	status = get_object_or_404(StatusObject, pk=status_id)
 
-	return render(request, 'status/individual_status.html', {'status' : status})
+	# cited works
+	cited_works = status.cited_works.all()
+
+	return render(request, 'status/individual_status.html', {'status' : status, 'cited_works' : cited_works})
