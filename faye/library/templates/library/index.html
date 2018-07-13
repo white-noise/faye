@@ -42,7 +42,7 @@
 
 			<div class="sub-heading">
 					<h2>
-						<a href="#">< </a>library
+						<a href="{% url 'base:index' %}">< </a>library
 					</h2>
 			</div>
 
@@ -116,7 +116,7 @@
 			</div>
 
 			<div class="nav">
-				<a href="#">back</a>
+				<a href="{% url 'base:index' %}">back</a>
 				<span class="page_num">
 					({{ page_library.number }}/{{ page_library.paginator.num_pages }})
 				</span>

@@ -42,7 +42,7 @@
 
 			<div class="sub-heading">
 					<h2>
-						<a href="#">< </a>updates
+						<a href="{% url 'base:index' %}">< </a>updates
 					</h2>
 			</div>
 
@@ -113,7 +113,7 @@
 			</div>
 
 			<div class="nav">
-				<a href="#">back</a>
+				<a href="{% url 'base:index' %}">back</a>
 				<span class="page_num">
 					({{ recent_status.number }}/{{ recent_status.paginator.num_pages }})
 				</span>

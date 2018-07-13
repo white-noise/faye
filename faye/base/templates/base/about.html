@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>ZMR</title>
+
+	<!-- fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+	<!-- CSS -->
+	{% load static %}
+	<link rel="icon" type="image/ico" href="{% static "base/img/green.ico" %}">
+	<link rel="stylesheet" href="{% static "base/css/mobile.css" %}" media="only screen and (max-width: 400px)" type="text/css">
+	<link rel="stylesheet" href="{% static "base/css/interior.css" %}" media="only screen and (min-width: 401px)" type="text/css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="heading">
+				<h2><a href="{% url 'base:index' %}">< </a>about</h2>
+			</div>
+			<div class="info">
+				<p>
+					Student. 20. University of Chicago.
+				</p>
+				<p>
+					<a href="{% url 'base:contact' %}">
+						<em>Contact information here.</em>
+					</a>
+				</p>
+				<p>
+					Here is a nice passage I read recently. I think current attempts
+					to express grief in literature are underpowered. And this grief
+					can be for anything—people you've known, things you think you
+					remember but fear and know you don't, a story's original language, 
+					that song that never comes on on the radio anymore, and so on.
+				</p>
+				<p>
+					Marco Polo describes to Kublai Khan:
+				</p>
+				<p style="margin-left:50px;">
+					<em>
+						I thought: "You reach a moment in life when,
+						among the people you have known, the dead outnumber
+						the living. And the mind refuses to accept
+						more faces, more expressions: on every new face you
+						encounter, it prints the old forms, tor each one it
+						finds the most suitable mask."
+					</em>
+				</p>
+				<p style="margin-left:50px;">
+					<em>
+						The stevedores climbed the steps in a line, bent
+						beneath demijohns and barrels; their faces were hidden
+						by sackcloth hoods; "Now they will straighten
+						up and I will recognize them," I thought, with impatience
+						and fear. But I could not take my eyes off
+						them; if I turned my gaze just a little toward the
+						crowd that crammed those narrow streets, I was assailed
+						by unexpected faces, reappearing from far
+						away, staring at me as if demanding recognition, as
+						if to recognize me, as if they had already recognized
+						me. Perhaps, for each of them, I also resembled
+						someone who was dead. I had barely arrived at
+						Adelma and I was already one of them, I had gone
+						over to their side, absorbed in that kaleidoscope of
+						eyes, wrinkles, grimaces.
+					</em>
+				</p>
+				<p style="margin-left:50px;">
+					<em>
+						I thought: "Perhaps Adelma is the city where you
+						arrive dying and where each finds again the people he
+						has known. This means I, too, am dead." And I also
+						thought: "This means the beyond is not happy."
+					</em>
+				</p>
+				<p style="margin-left:50px;text-align:right;">
+					<em>
+					– Calvino: Invisible Cities (p. 95)
+					</em>
+				</p>
+				<p>
+					I write and do math, and <em>by god</em> I'll keep trying to do so.
+					Seriously, drop me a line.
+				</p>
+			</div>
+			<div class="nav">
+				<a href="{% url 'base:index' %}">back</a>
+			</div>
+			<div class="footer">
+				zane marius rossi 2016
+			</div>
+		</div>
+	</div>
+</body>
+</html>

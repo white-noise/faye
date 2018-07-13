@@ -51,8 +51,10 @@
 					{% for elem in menu_objects %}
 						<div class="status_text">
 							<li>
-								<span class="status_title">{{ elem.title }}</span>
-								<!-- is there a way we can salvage the generic list template? -->
+								<span class="status_title">
+									{{ elem.title }}
+								</span>
+								<br>
 								<span>
 									<a href="{% url 'produce:written_individual' elem.id %}">{{ elem.description }}</a>
 								</span>

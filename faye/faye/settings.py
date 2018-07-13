@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'base.apps.BaseConfig',
     'produce.apps.ProduceConfig',
     'status.apps.StatusConfig',
     'library.apps.LibraryConfig',

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>ZMR</title>
+
+	<!-- fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+	<!-- CSS -->
+	{% load static %}
+	<link rel="icon" type="image/ico" href="{% static "base/img/green.ico" %}">
+	<link rel="stylesheet" href="{% static "base/css/mobile.css" %}" media="only screen and (max-width: 400px)" type="text/css">
+	<link rel="stylesheet" href="{% static "base/css/interior.css" %}" media="only screen and (min-width: 401px)" type="text/css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="heading">
+				<h2><a href="{% url 'base:about' %}">< </a>contact</h2>
+			</div>
+			<hr>
+			<div class="info">
+				<div class="contact">
+					<a href="mailto:pedalferrous@gmail.com">email:</a><span style="padding-left:28px;color:#777;">&mdash; pedalferrous@gmail.com</span>
+				</div>
+				<div class="contact">
+					<a href="http://www.github.com/white-noise">github:</a><span style="padding-left:21px;color:#777;">&mdash; github.com/white-noise</span>
+				</div>
+				<div class="contact">
+					<a href="http://www.pedalferrous.tumblr.com">tumblr:</a><span style="padding-left:18px;color:#777;">&mdash; pedalferrous.tumblr.com</span>
+				</div>
+				<div class="contact">
+					<a href="http://www.linkedin.com/in/zane-marius-rossi">linkedin:</a><span style="padding-left:10px;color:#777;">&mdash; linkedin.com/in/zane-rossi</span>
+				</div>
+				<div class="contact">
+					<a href="#">resume:</a><span style="padding-left:12px;color:#777;">&mdash; link to resume/curriculum vitae</span>
+				</div>
+			</div>
+			<div class="nav">
+				<a href="{% url 'base:about' %}">back</a>
+			</div>
+			<div class="footer">
+				zane marius rossi 2016
+			</div>
+		</div>
+	</div>
+</body>
+</html>

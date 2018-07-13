@@ -42,18 +42,18 @@
 
 			<div class="sub-heading">
 				<h2>
-					<a href="#">< </a>produce
+					<a href="{% url 'produce:written' %}">< </a>{{ written_object.title }}
 				</h2>
 			</div>
 
 			<div class="sub-heading">
 				<div class="info">
-					This is the written individual.
+					This is the written individual {{ written_object.pk }}.
 				</div>
 			</div>
 
 			<div class="nav">
-				<a href="#">back</a>
+				<a href="{% url 'produce:written' %}">back</a>
 			</div>
 			<div class="footer">
 				zane marius rossi 2016

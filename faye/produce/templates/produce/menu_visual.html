@@ -42,18 +42,37 @@
 
 			<div class="sub-heading">
 				<h2>
-					<a href="{% url 'produce:visual' %}">< </a>{{ visual_object.title }}
+					<a href="{% url 'produce:index' %}">< </a>{{ heading }}
 				</h2>
 			</div>
 
-			<div class="sub-heading">
-				<div class="info">
-					This is the visual individual {{ visual_object.pk }}.
-				</div>
+			<div class="info">
+				{% if menu_objects %}
+					{% for elem in menu_objects %}
+						<div class="status_text">
+							<li>
+								<span class="status_title">
+									{{ elem.title }}
+								</span>
+								<br>
+								<span>
+									<a href="{% url 'produce:visual_individual' elem.id %}">{{ elem.description }}</a>
+								</span>
+							</li>
+						</div>
+						<div class="status_date">
+							{{ elem.pub_date|date:"m/d/y (H:s)" }}
+						</div>
+					{% endfor %}
+					<div style="clear: both;"></div>
+				{% else %}
+					<!-- edge case -->
+					<p>No objects are available.</p>
+				{% endif %}
 			</div>
 
 			<div class="nav">
-				<a href="{% url 'produce:visual' %}">back</a>
+				<a href="{% url 'produce:index' %}">back</a>
 			</div>
 			<div class="footer">
 				zane marius rossi 2016
