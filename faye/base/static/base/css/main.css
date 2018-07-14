@@ -261,3 +261,16 @@ hr {
 .float_date {
 	float: right;
 }
+
+.citations {
+	padding-left: 20px;
+	padding-top: 0.5em;
+}
+
+.info_text {
+	padding-bottom: 0.5em;
+}
+
+.info_date {
+	padding-bottom: 0.5em;
+}

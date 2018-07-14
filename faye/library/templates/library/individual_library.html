@@ -15,15 +15,13 @@
 					</h2>
 				</div>
 				<div class="info">
-					<div class="">
+					<div class="info_text">
 						{{ book.author }}
 					</div>
-					<div class="">
-						<span>
-							pages read: ({{ book.pages_read}}/{{ book.pages }})
-						</span>
+					<div class="info_text">
+						Pages read: ({{ book.pages_read}}/{{ book.pages }})
 					</div>
-					<div class="">
+					<div class="info_text">
 						<span>
 							{{ book.description }}
 						</span>
@@ -31,7 +29,7 @@
 				</div>
 			{% else %}
 				<div class="info">
-					<p>No information is available.</p>	
+					<span>No information is available.</span>	
 				</div>
 			{% endif %}
 

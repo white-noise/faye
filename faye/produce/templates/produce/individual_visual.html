@@ -15,7 +15,15 @@
 
 			<div class="sub-heading">
 				<div class="info">
-					This is the visual individual {{ visual_object.pk }}.
+					<div class="info_text">
+						This is the visual individual {{ visual_object.pk }}.	
+					</div>
+					<div class="info_text">
+						<img src="{{ visual_object.content.url }}" style="width:500px;">	
+					</div>
+					<div class="info_text">
+						This is a photo of an egg, as you might expect.	
+					</div>
 				</div>
 			</div>
 

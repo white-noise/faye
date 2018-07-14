@@ -23,6 +23,7 @@ class VisualObject(models.Model):
 	description = models.CharField(max_length=500, default="n/a")
 	pub_date    = models.DateTimeField('date published',default=timezone.now)
 	path        = models.CharField(max_length=500, default="n/a")
+	content     = models.ImageField(upload_to='img/', default=None)
 	# eventually this will be an ImageField or a FileField (permitting uploads)
 
 	def __str__(self):
