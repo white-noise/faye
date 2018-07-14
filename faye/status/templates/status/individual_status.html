@@ -66,7 +66,7 @@
 			<div style="padding-top:1em;">
 			{% if cited_works %}
 				{% for elem in cited_works %}
-					<span class="status_title">
+					<span class="float_title">
 						<a href="{% url 'library:individual' elem.pk %}">{{ elem.title }}</a>
 					</span>
 					<span>

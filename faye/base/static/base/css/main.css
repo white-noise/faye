@@ -1,5 +1,12 @@
-/*zane marius rossi, 2016*/
-/*to be used for the general internal page*/
+/* zane marius rossi, 2016-18 */
+/* for main django application */
+
+html, body {
+	background-color: black;
+	color: #AAA;
+	font-family: 'Open Sans', sans-serif;
+	overflow: hidden;
+}
 
 html, body {
 	background-color: black;
@@ -7,6 +14,61 @@ html, body {
 	text-align: left;
 	font-family: 'Open Sans', sans-serif;
 	overflow: hidden;
+}
+
+.eig-main-nav {
+	text-align: center;
+	display: inline-block;
+	width: 23%;
+}
+
+.content {
+	margin: auto;
+	width: 500px;
+}
+
+.eig-name-plate {
+	padding-bottom:0px; 
+	position: relative;
+	left: 0px;
+	text-align: left;
+	font-size: 20px;
+}
+
+.eig-hr {
+	width: 500px;
+	border-color: #333;
+	color: #333;
+}
+
+.eig-main {
+	padding-top: 200px;
+	width: 500px;
+	margin: auto;
+}
+
+.eig-logo {
+	width: 500px;
+	height: 240px;
+	background-image: url("../img/eig.gif");
+	background-repeat: no-repeat;
+}
+
+.eig-logo:hover {
+}
+
+.eig-nav-plate {
+	margin: auto;
+	width: 500px;
+	font-size: 20px;
+}
+
+.eig-footer {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	font-size: 10px;
+	color: #333;
 }
 
 img {
@@ -142,18 +204,6 @@ hr {
 	padding-left: 50px;
 }
 
-.status_title {
-	color: #777 !important;
-	padding-bottom: 0.5em;
-}
-
-.status_text {
-
-}
-
-.status_date {
-
-}
 
 .info {
 	color: #777;
@@ -163,11 +213,11 @@ hr {
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
 	hyphens: auto;
+	padding-left: 20px;
 }
 
-.info > .status_text > li {
+.info > .float_text > li {
 	list-style: none;
-	padding-left: 20px;
 }
 
 .nav-plate {
@@ -196,4 +246,18 @@ hr {
 	right: 10px;
 	font-size: 10px;
 	color: #333;
+}
+
+.float_title {
+	color: #777 !important;
+	padding-bottom: 0.5em;
+}
+
+.float_text {
+	width: 350px;
+	float: left;
+}
+
+.float_date {
+	float: right;
 }
