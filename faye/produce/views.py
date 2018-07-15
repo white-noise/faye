@@ -5,11 +5,14 @@ from .models import WrittenObject, VisualObject
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 def index(request):
-	# leads to page allowing choice between media types
-	return render(request, 'produce/index.html')
 
-	# sort both object sets, return most recent (or none) and display them in the template.
-	# ideas for additions include a most recent post in both which leads directly to object
+	# take most recent of both objects
+	recent_written = WrittenObject.objects.order_by('-pub_date')
+	recent_visual  = VisualObject.objects.order_by('-pub_date')
+
+	# leads to page allowing choice between media types
+	context = {'recent_written' : recent_written, 'recent_visual': recent_visual}
+	return render(request, 'produce/index.html', context)
 
 def written(request):
 	# leads to page of just written objects in a list

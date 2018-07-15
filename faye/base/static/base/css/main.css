@@ -278,3 +278,7 @@ hr {
 .info_date {
 	padding-bottom: 0.5em;
 }
+
+.indented {
+	padding-left: 50px;
+}
