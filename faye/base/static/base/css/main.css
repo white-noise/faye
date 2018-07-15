@@ -8,23 +8,10 @@ html, body {
 	overflow: hidden;
 }
 
-html, body {
-	background-color: black;
-	color: #777;
-	text-align: left;
-	font-family: 'Open Sans', sans-serif;
-	overflow: hidden;
-}
-
 .eig-main-nav {
 	text-align: center;
 	display: inline-block;
 	width: 23%;
-}
-
-.content {
-	margin: auto;
-	width: 500px;
 }
 
 .eig-name-plate {
@@ -52,9 +39,6 @@ html, body {
 	height: 240px;
 	background-image: url("../img/eig.gif");
 	background-repeat: no-repeat;
-}
-
-.eig-logo:hover {
 }
 
 .eig-nav-plate {
@@ -102,16 +86,6 @@ li {
 	list-style: none;
 }
 
-/*for highlighting of section titles in updates*/
-span:hover a{
-	color:#363;
-}
-
-/*remove green highlight on mouseover*/
-span a:hover{
-	color:#777;
-}
-
 span {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -133,14 +107,6 @@ hr {
 	width: 500px;
 }
 
-::selection {
-  background: #787; /* WebKit/Blink Browsers */
-}
-
-::-moz-selection {
-  background: #787; /* Gecko Browsers */
-}
-
 .wrapper {
 	position: absolute;
 	top: 0;
@@ -153,16 +119,6 @@ hr {
 .content {
 	margin: auto;
 	width: 500px;
-}
-
-/*for writing page list background*/
-.writing {
-
-}
-
-/*no spacing in non-mobile*/
-.writing li {
-	padding-bottom: 0px;
 }
 
 /*for zmr page background*/
@@ -214,10 +170,6 @@ hr {
 	-moz-hyphens: auto;
 	hyphens: auto;
 	padding-left: 20px;
-}
-
-.info > .float_text > li {
-	list-style: none;
 }
 
 .nav-plate {

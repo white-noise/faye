@@ -14,10 +14,11 @@
 			</div>
 
 			<div class="info">
-				<div class="float_text">
+				<div class="info_text">
 					<li>
 						<a href="{% url 'produce:written' %}">Written</a>
 					</li>
+
 					{% if recent_written %}
 					<li class="indented">
 						Most recent: ({{ recent_written.0.pub_date|date:"m/d/y" }})
@@ -42,6 +43,7 @@
 					<li>
 						<a href="{% url 'produce:visual' %}">Visual</a>
 					</li>
+
 					{% if recent_visual %}
 					<li class="indented">
 						Most recent: ({{ recent_visual.0.pub_date|date:"m/d/y" }})
@@ -65,7 +67,6 @@
 					{% endif %}
 
 				</div>
-				<div style="clear: both;"></div>
 			</div>
 
 			<div class="nav">

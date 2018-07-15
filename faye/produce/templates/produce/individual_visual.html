@@ -27,6 +27,21 @@
 				</div>
 			</div>
 
+			<div class="citations">
+			{% if cited_works %}
+				{% for elem in cited_works %}
+					<span class="info_text">
+						<a href="{% url 'library:individual' elem.pk %}">{{ elem.title }} – {{ elem.author }}</a>
+					</span>
+					<br>
+				{% endfor %}
+			{% else %}
+				<span class="info_text">
+					No citations.
+				</span>	
+			{% endif %}
+			</div>
+
 			<div class="nav">
 				<a href="{% url 'produce:visual' %}">back</a>
 			</div>

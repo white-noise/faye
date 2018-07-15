@@ -6,6 +6,7 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 def index(request):
 
+	# specify first and last name fields in library model for last name sorting
 	author_library = LibraryObject.objects.order_by('title')
 
 	# handling pagination
