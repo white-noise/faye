@@ -253,6 +253,10 @@ hr {
 	padding-bottom: 0.5em;
 }
 
+.float_title > a {
+	color: #777 !important;
+}
+
 .float_text {
 	width: 350px;
 	float: left;

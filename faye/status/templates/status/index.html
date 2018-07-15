@@ -60,11 +60,17 @@
 					{% for status in recent_status %}
 						<div class="float_text">
 							<li>
-								<span class="float_title">{{ status.status_title }}:</span>
+								<span class="float_title">
+									<a href="{% url 'status:individual' status.id %}">
+										{{ status.status_title }}:
+									</a>
+								</span>
 								<span>
 									<!-- can also supply abbreviated text for display (passed in view) -->
 									<!-- i.e., a conditional for if the entire text is displayed or no -->
-									<a href="{% url 'status:individual' status.id %}">{{ status.status_text }}</a>
+									<a href="{% url 'status:individual' status.id %}">
+										{{ status.status_text }}
+									</a>
 								</span>
 							</li>
 						</div>

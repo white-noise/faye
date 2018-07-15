@@ -8,6 +8,7 @@ def index(request):
 	# leads to page allowing choice between media types
 	return render(request, 'produce/index.html')
 
+	# sort both object sets, return most recent (or none) and display them in the template.
 	# ideas for additions include a most recent post in both which leads directly to object
 
 def written(request):

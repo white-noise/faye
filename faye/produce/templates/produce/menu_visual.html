@@ -19,11 +19,15 @@
 						<div class="float_text">
 							<li>
 								<span class="float_title">
-									{{ elem.title }}
+									<a href="{% url 'produce:visual_individual' elem.id %}">
+										{{ elem.title }}
+									</a>
 								</span>
 								<br>
 								<span>
-									<a href="{% url 'produce:visual_individual' elem.id %}">{{ elem.description }}</a>
+									<a href="{% url 'produce:visual_individual' elem.id %}">
+										{{ elem.description }}
+									</a>
 								</span>
 							</li>
 						</div>

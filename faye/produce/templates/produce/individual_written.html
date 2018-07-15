@@ -15,7 +15,9 @@
 
 			<div class="sub-heading">
 				<div class="info">
-					This is the written individual {{ written_object.pk }}.
+					<div class="info_text">
+						{{ written_object.content|safe }}
+					</div>
 				</div>
 			</div>
 
