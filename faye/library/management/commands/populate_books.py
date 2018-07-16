@@ -7,7 +7,7 @@ import datetime
 
 class Command(BaseCommand):
 	args = ""
-	help = ""
+	help = "A script to read in book data from internal json file."
 
 	def _populate(self):
 
@@ -59,11 +59,16 @@ class Command(BaseCommand):
 			rating    = 0
 
 			# create a book object and save to database
-			book = LibraryObject(title=title, author=authors, description=description, pub_date=publishedDate, acq_date=acqDate, ISBN_10=ISBN_10, ISBN_13=ISBN_13, pages=pageCount, pages_read=pagesRead, rating=rating)
+			# book = LibraryObject(title=title, author=authors, description=description, pub_date=publishedDate, acq_date=acqDate, ISBN_10=ISBN_10, ISBN_13=ISBN_13, pages=pageCount, pages_read=pagesRead, rating=rating)
+			# not using description
+			book = LibraryObject(title=title, author=authors,\
+			pub_date=publishedDate, acq_date=acqDate, ISBN_10=ISBN_10, ISBN_13=ISBN_13,\
+			pages=pageCount, pages_read=pagesRead, rating=rating)
+
 			book.save()
 
 			#####
-			# additional concepts: web link to google books entry
+			# additional concept: web link to google books entry
 			#####
 
 			print(authors)
