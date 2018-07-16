@@ -2,51 +2,46 @@
 
 {% block content %}
 
-			<div class="heading">
-				<div class="sub-heading">
-				</div>
-			</div>
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
 
-			<div class="sub-heading">
-				<h2>
-					<a href="{% url 'produce:visual' %}">< </a>{{ visual_object.title }}
-				</h2>
-			</div>
+	<div class="sub-heading">
+		<h2>
+			<a href="{% url 'produce:visual' %}">< </a>{{ visual_object.title }}
+		</h2>
+	</div>
 
-			<div class="sub-heading">
-				<div class="info">
-					<div class="info_text">
-						This is the visual individual {{ visual_object.pk }}.	
-					</div>
-					<div class="info_text">
-						<img src="{{ visual_object.content.url }}" style="width:500px;">	
-					</div>
-					<div class="info_text">
-						This is a photo of an egg, as you might expect.	
-					</div>
-				</div>
-			</div>
+	<div class="info">
+		<div class="info_text">
+			This is the visual individual {{ visual_object.pk }}.	
+		</div>
+		<div class="info_text">
+			<img src="{{ visual_object.content.url }}" class="info_img">	
+		</div>
+	</div>
 
-			<div class="citations">
-			{% if cited_works %}
-				{% for elem in cited_works %}
-					<span class="info_text">
-						<a href="{% url 'library:individual' elem.pk %}">{{ elem.title }} – {{ elem.author }}</a>
-					</span>
-					<br>
-				{% endfor %}
-			{% else %}
-				<span class="info_text">
-					No citations.
-				</span>	
-			{% endif %}
-			</div>
+	<div class="citations">
+	{% if cited_works %}
+		{% for elem in cited_works %}
+			<span class="info_text">
+				<a href="{% url 'library:individual' elem.pk %}">{{ elem.title }} – {{ elem.author }}</a>
+			</span>
+			<br>
+		{% endfor %}
+	{% else %}
+		<span class="info_text">
+			No citations.
+		</span>	
+	{% endif %}
+	</div>
 
-			<div class="nav">
-				<a href="{% url 'produce:visual' %}">back</a>
-			</div>
-			<div class="footer">
-				zane marius rossi 2016
-			</div>
+	<div class="nav">
+		<a href="{% url 'produce:visual' %}">back</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
 
 {% endblock %}

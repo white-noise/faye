@@ -20,20 +20,21 @@
 					</li>
 
 					{% if recent_written %}
-					<li class="indented">
-						Most recent: ({{ recent_written.0.pub_date|date:"m/d/y" }})
-						<br>
-						<span>
+					<li class="indented"> 
+						<div class="info_text">
+							Most recent:
 							<a href="{% url 'produce:written_individual' recent_written.0.pk %}">
 								{{ recent_written.0.title }}
 							</a>
-						</span>
-						<br>
-						<span>
+						</div>
+						<div class="info_text">
 							<a href="{% url 'produce:written_individual' recent_written.0.pk %}">
 								{{ recent_written.0.description }}
 							</a>
-						</span>
+						</div>
+						<div class="info_text_dark">
+							({{ recent_written.0.pub_date|date:"m/d/y" }})
+						</div>
 					</li>
 					{% else %}
 					<li class="indented">
@@ -45,20 +46,21 @@
 					</li>
 
 					{% if recent_visual %}
-					<li class="indented">
-						Most recent: ({{ recent_visual.0.pub_date|date:"m/d/y" }})
-						<br>
-						<span>
+					<li class="indented"> 
+						<div class="info_text">
+							Most recent:
 							<a href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
 								{{ recent_visual.0.title }}
 							</a>
-						</span>
-						<br>
-						<span>
+						</div>
+						<div class="info_text">
 							<a href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
 								{{ recent_visual.0.description }}
 							</a>
-						</span>
+						</div>
+						<div class="info_text_dark">
+							({{ recent_visual.0.pub_date|date:"m/d/y" }})
+						</div>
 					</li>
 					{% else %}
 					<li class="indented">

@@ -8,6 +8,56 @@ html, body {
 	overflow: hidden;
 }
 
+img {
+	display: block;
+	margin: auto;
+}
+
+a {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #777;
+}
+
+li {
+	padding-bottom: 0.5em;
+	list-style: none;
+}
+
+span {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	color: #333;
+}
+
+span:hover {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	color: #777;
+}
+
+hr {
+	border-color: #333;
+	color: #333;
+	width: 500px;
+}
+
+::selection {
+  background: #777;
+}
+::-moz-selection {
+  background: #777;
+}
+
 .eig-main-nav {
 	text-align: center;
 	display: inline-block;
@@ -55,58 +105,6 @@ html, body {
 	color: #333;
 }
 
-img {
-	display: block;
-	margin: auto;
-}
-
-a {
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-	color: #333;
-	text-decoration: none;
-}
-
-a:hover,
-a:focus {
-	color: #777;
-}
-
-.style-link {
-	cursor:pointer;
-}
-
-.style-link:hover {
-	cursor:pointer;
-}
-
-li {
-	padding-bottom: 0.5em;
-	list-style: none;
-}
-
-span {
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-	color: #333;
-	cursor: pointer;
-}
-
-span:hover {
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-	color: #777;
-}
-
-hr {
-	border-color: #333;
-	color: #333;
-	width: 500px;
-}
-
 .wrapper {
 	position: absolute;
 	top: 0;
@@ -119,14 +117,6 @@ hr {
 .content {
 	margin: auto;
 	width: 500px;
-}
-
-/*for zmr page background*/
-.zmr {
-	width:500px;
-	height: 100px;
-	background-size: 100%;
-	background-repeat: no-repeat;
 }
 
 .heading {
@@ -157,6 +147,7 @@ hr {
 }
 
 .page_num {
+	color: #333 !important;
 	padding-left: 50px;
 }
 
@@ -220,15 +211,24 @@ hr {
 
 .citations {
 	padding-left: 20px;
-	padding-top: 0.5em;
 }
 
 .info_text {
 	padding-bottom: 0.5em;
 }
 
+.info_text_dark {
+	color: #333;
+	padding-bottom: 0.5em;
+}
+
 .info_date {
 	padding-bottom: 0.5em;
+}
+
+.info_img {
+	width: 480px;
+	margin: 0;
 }
 
 .indented {

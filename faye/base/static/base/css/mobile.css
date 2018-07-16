@@ -1,11 +1,10 @@
 /* zane marius rossi, 2016-18 */
-/* for mobile appearance */
+/* for mobile (wd lt 500 px) */
 
 html, body {
 	background-color: black;
-	color: #777;
+	color: #AAA;
 	font-family: 'Open Sans', sans-serif;
-	max-width: 100%;
 	overflow: hidden;
 }
 
@@ -27,48 +26,81 @@ a:focus {
 	color: #777;
 }
 
-.style-link {
-}
-
-.style-link:hover {
-	cursor:pointer;
-}
-
 li {
 	padding-bottom: 0.5em;
-}
-
-span a{
-	color:#363;
-}
-
-span a:hover{
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-	color:#777;
+	list-style: none;
 }
 
 span {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
+	color: #333;
+}
+
+span:hover {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
 	color: #777;
-	cursor: pointer;
 }
 
 hr {
 	border-color: #333;
 	color: #333;
-	width: 300px;
+	width: 100%;
 }
 
 ::selection {
-  background: #787; /* WebKit/Blink Browsers */
+  background: #777;
+}
+::-moz-selection {
+  background: #777;
 }
 
-::-moz-selection {
-  background: #787; /* Gecko Browsers */
+.eig-main-nav {
+	text-align: center;
+	display: inline-block;
+	width: 23%;
+}
+
+.eig-name-plate {
+	padding-bottom:0px; 
+	position: relative;
+	left: 0px;
+	text-align: left;
+	font-size: 20px;
+}
+
+.eig-hr {
+	width: 100%;
+	border-color: #333;
+	color: #333;
+}
+
+.eig-main {
+	padding-top: 200px;
+	width: 100%;
+	margin: auto;
+}
+
+.eig-logo {
+	width: 300px;
+	height: 144px;
+	margin: auto;
+	background-size: contain;
+	background-image: url("../img/eig.gif");
+	background-repeat: no-repeat;
+}
+
+.eig-nav-plate {
+	margin: auto;
+	width: 100%;
+	font-size: 1em;
+}
+
+.eig-footer {
+	display: none;
 }
 
 .wrapper {
@@ -80,81 +112,14 @@ hr {
 	overflow: auto;
 }
 
-.nav {
-	text-align: center;
-	display: inline-block;
-	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.main-nav {
-	text-align: center;
-	display: inline-block;
-	font-size: 1em;
-	width: 23%;
-}
-
-.main-nav a:hover {
-	color: #AAA;
-}
-
 .content {
 	margin: auto;
-	width: 90%;
-}
-
-/*for writing list page background*/
-.writing {
-}
-
-.img-insert {
-	width: 100%;
-}
-
-/*for zmr page background*/
-.zmr {
-}
-
-.name-plate {
-	padding-bottom:0px; 
-	position: relative;
-	width: 90%;
-	margin: auto;
-	text-align: center;
-	font-size: 1.2em;
-}
-
-.eig-hr {
-	width: 90%;
-	border-color: #333;
-	color: #333;
-}
-
-.eig-main {
-	padding-top: 200px;
-	width: 100%;
-	margin: auto;
-}
-
-.eig-main a:hover{
-	color: #AAA;
-}
-
-.logo {
-	display: block;
-	margin: auto;
-	width: 300px;
-	height: 144px;
-	background-size: contain;
-	background-image: url("../img/eig.gif");
-	background-repeat: no-repeat;
+	width: 80%;
 }
 
 .heading {
 	color:#AAA;
-	text-align: center;
-	padding-top: 200px;
+	padding-top: 100px;
 	width: 100%;
 	display: block;
 	margin: auto;
@@ -162,45 +127,104 @@ hr {
 
 .sub-heading {
 	color:#AAA;
-	text-align: center;
 	display: block;
 	margin: auto;
 	width: 100%;
 }
 
+.arrow_nav {
+	width: 100%;
+}
+
+.arrow_nav_l {
+	float: left;
+}
+
+.arrow_nav_r {
+	float: right;
+}
+
+.page_num {
+	color: #333 !important;
+	padding-left: 50px;
+}
+
+
 .info {
 	color: #777;
 	margin: auto;
-	width: 90%;
+	width: 100%;
 	text-align: left;
-}
-
-.info > li {
-	list-style: none;
-	padding-left: 0px;
-}
-
-.contact {
-	color: #777;
-	margin: auto;
-	width:70%;
-	text-align: center;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
 }
 
 .nav-plate {
 	margin: auto;
-	width: 90%;
-	font-size: 1em;
+	width: 100%;
+}
+
+.nav {
+	padding-top: 10px;
+	padding-bottom: 50px;
+	margin: auto;
+	text-align: center;
 }
 
 .dual-nav {
 	display: inline-block;
-	width: 40%;
-	padding-bottom: 20px;
+	width: 240px;
+	padding-bottom: 50px;
 	margin: auto;
 	text-align: center;
 }
 
 .footer {
 	display: none;
+}
+
+.float_title {
+	color: #777 !important;
+	padding-bottom: 0.5em;
+}
+
+.float_title > a {
+	color: #777 !important;
+}
+
+.float_text {
+	width: 350px;
+	float: left;
+}
+
+.float_date {
+	float: right;
+	display: none;
+}
+
+.citations {
+
+}
+
+.info_text {
+	padding-bottom: 0.5em;
+}
+
+.info_text_dark {
+	color: #333;
+	padding-bottom: 0.5em;
+}
+
+.info_date {
+	padding-bottom: 0.5em;
+}
+
+.info_img {
+	width: 100%;
+	margin: 0;
+}
+
+.indented {
+	padding-left: 20px;
 }

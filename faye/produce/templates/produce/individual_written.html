@@ -2,45 +2,43 @@
 
 {% block content %}
 
-			<div class="heading">
-				<div class="sub-heading">
-				</div>
-			</div>
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
 
-			<div class="sub-heading">
-				<h2>
-					<a href="{% url 'produce:written' %}">< </a>{{ written_object.title }}
-				</h2>
-			</div>
+	<div class="sub-heading">
+		<h2>
+			<a href="{% url 'produce:written' %}">< </a>{{ written_object.title }}
+		</h2>
+	</div>
 
-			<div class="sub-heading">
-				<div class="info">
-					<div class="info_text">
-						{{ written_object.content|safe }}
-					</div>
-				</div>
-			</div>
+	<div class="info">
+		<div class="info_text">
+			{{ written_object.content|safe }}
+		</div>
+	</div>
 
-			<div class="citations">
-			{% if cited_works %}
-				{% for elem in cited_works %}
-					<span class="info_text">
-						<a href="{% url 'library:individual' elem.pk %}">{{ elem.title }} – {{ elem.author }}</a>
-					</span>
-					<br>
-				{% endfor %}
-			{% else %}
-				<span class="info_text">
-					No citations.
-				</span>	
-			{% endif %}
-			</div>
+	<div class="citations">
+	{% if cited_works %}
+		{% for elem in cited_works %}
+			<span class="info_text">
+				<a href="{% url 'library:individual' elem.pk %}">{{ elem.title }} – {{ elem.author }}</a>
+			</span>
+			<br>
+		{% endfor %}
+	{% else %}
+		<span class="info_text">
+			No citations.
+		</span>	
+	{% endif %}
+	</div>
 
-			<div class="nav">
-				<a href="{% url 'produce:written' %}">back</a>
-			</div>
-			<div class="footer">
-				zane marius rossi 2016
-			</div>
+	<div class="nav">
+		<a href="{% url 'produce:written' %}">back</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
 
 {% endblock %}

@@ -8,9 +8,11 @@
 - enabling reasonable sorting methods for library contents (i.e., alphabetical by last name, by pub date, by acq date)
 - it might be edifying to include an integrated email form (I don't prefer the idea of comments or posting).
 - finalizing production mode image/media serving (should be easy as only admin has privilege)
-- actual aesthetic changes to the website (viz images, lettering, justification settings)
+- actual aesthetic changes to the website (viz images, lettering, justification settings, simple scroll indicators)
 - eventually use of the reverse capabilities of many-to-many fields in the library objects
 - standardize the hierarchy of page content (i.e., how subheadings interact with info, etc.)
+- specialty pages within the library app (keep minimal: e.g., especially recommended, new)
+- medium term: separate books and authors into parent and child objects, independently groupable, assignable, etc.
 
 ## notes
 - probably page numbers can be easily passed to individual templates for back-paging
