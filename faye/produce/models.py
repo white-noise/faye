@@ -24,7 +24,6 @@ class VisualObject(models.Model):
 	title       = models.CharField(max_length=200, default="n/a")
 	description = models.CharField(max_length=500, default="n/a")
 	pub_date    = models.DateTimeField('date published',default=timezone.now)
-	path        = models.CharField(max_length=500, default="n/a")
 	content     = models.ImageField(upload_to='img/', default=None)
 	
 	cited_works  = models.ManyToManyField('library.LibraryObject', blank=True)

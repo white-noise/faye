@@ -56,10 +56,11 @@ class Command(BaseCommand):
 
 			pagesRead = 0 # default
 			acqDate   = timezone.now() # default
+			rating    = 0
 
 			# create a book object and save to database
-			# book = LibraryObject(title=title, author=authors, description=description, pub_date=publishedDate, acq_date=acqDate, ISBN_10=ISBN_10, ISBN_13=ISBN_13, pages=pageCount, pages_read=pagesRead,)
-			# book.save()
+			book = LibraryObject(title=title, author=authors, description=description, pub_date=publishedDate, acq_date=acqDate, ISBN_10=ISBN_10, ISBN_13=ISBN_13, pages=pageCount, pages_read=pagesRead, rating=rating)
+			book.save()
 
 			#####
 			# additional concepts: web link to google books entry

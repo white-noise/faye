@@ -14,61 +14,56 @@
 			</div>
 
 			<div class="info">
-				<div class="info_text">
-					<li>
-						<a href="{% url 'produce:written' %}">Written</a>
-					</li>
+				<li>
+					<a href="{% url 'produce:written' %}">Written</a>
+				</li>
 
-					{% if recent_written %}
-					<li class="indented"> 
-						<div class="info_text">
-							Most recent:
-							<a href="{% url 'produce:written_individual' recent_written.0.pk %}">
-								{{ recent_written.0.title }}
-							</a>
-						</div>
-						<div class="info_text">
-							<a href="{% url 'produce:written_individual' recent_written.0.pk %}">
-								{{ recent_written.0.description }}
-							</a>
-						</div>
-						<div class="info_text_dark">
-							({{ recent_written.0.pub_date|date:"m/d/y" }})
-						</div>
-					</li>
-					{% else %}
-					<li class="indented">
-						There is nothing here.
-					</li>
-					{% endif %}
-					<li>
-						<a href="{% url 'produce:visual' %}">Visual</a>
-					</li>
+				{% if recent_written %}
+				<li class="indented"> 
+					<div class="info_text">
+						Most recent:
+						<a href="{% url 'produce:written_individual' recent_written.0.pk %}">
+							{{ recent_written.0.title }}
+						</a>
+					<br>
+						<a href="{% url 'produce:written_individual' recent_written.0.pk %}">
+							{{ recent_written.0.description }}
+						</a>
+					</div>
+					<div class="info_text_dark">
+						({{ recent_written.0.pub_date|date:"m/d/y" }})
+					</div>
+				</li>
+				{% else %}
+				<li class="indented">
+					There is nothing here.
+				</li>
+				{% endif %}
+				<li>
+					<a href="{% url 'produce:visual' %}">Visual</a>
+				</li>
 
-					{% if recent_visual %}
-					<li class="indented"> 
-						<div class="info_text">
-							Most recent:
-							<a href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
-								{{ recent_visual.0.title }}
-							</a>
-						</div>
-						<div class="info_text">
-							<a href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
-								{{ recent_visual.0.description }}
-							</a>
-						</div>
-						<div class="info_text_dark">
-							({{ recent_visual.0.pub_date|date:"m/d/y" }})
-						</div>
-					</li>
-					{% else %}
-					<li class="indented">
-						There is nothing here.
-					</li>
-					{% endif %}
-
-				</div>
+				{% if recent_visual %}
+				<li class="indented"> 
+					<div class="info_text">
+						Most recent:
+						<a href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
+							{{ recent_visual.0.title }}
+						</a>
+					<br>
+						<a href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
+							{{ recent_visual.0.description }}
+						</a>
+					</div>
+					<div class="info_text_dark">
+						({{ recent_visual.0.pub_date|date:"m/d/y" }})
+					</div>
+				</li>
+				{% else %}
+				<li class="indented">
+					There is nothing here.
+				</li>
+				{% endif %}
 			</div>
 
 			<div class="nav">
