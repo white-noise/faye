@@ -1222,5 +1222,267 @@
         "categories": [
             "Detective and mystery stories"
         ]
+    },
+    {
+        "description": "The Culture Industry is an unrivaled indictment of the banality of mass culture.\"--Jacket.", 
+        "pageCount": 210, 
+        "publishedDate": "2001", 
+        "industryIdentifiers": [
+            {
+                "identifier": "0415253802", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9780415253802", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Theodor W. Adorno", 
+        "title": "The Culture Industry", 
+        "categories": [
+            "Social Science"
+        ]
+    }, 
+    {
+        "description": "", 
+        "pageCount": 150, 
+        "publishedDate": "1989", 
+        "industryIdentifiers": [
+            {
+                "identifier": "OCLC:962413425", 
+                "type": "OTHER"
+            }
+        ], 
+        "authors": "Donald Barthelme", 
+        "title": "The King", 
+        "categories": [
+            "Arthurian romances"
+        ]
+    }, 
+    {
+        "description": "The first edition of this work appeared in 1930, and its originality won it immediate recognition as a classic of modern physical theory. The fourth edition has been bought out to meet a continued demand. Some improvements have been made, the main one being the complete rewriting of the chapter on quantum electrodymanics, to bring in electron-pair creation. This makes it suitable as an introduction to recent works on quantum field theories.", 
+        "pageCount": 314, 
+        "publishedDate": "1981-01-01", 
+        "industryIdentifiers": [
+            {
+                "identifier": "0198520115", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9780198520115", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Paul Adrien Maurice Dirac", 
+        "title": "The Principles of Quantum Mechanics", 
+        "categories": [
+            "Philosophy"
+        ]
+    }, 
+    {
+        "description": "An attempt to summon and imprison Death, results, instead, in the capture of Morpheus, the Sandman, who must regain the tools of his powers.", 
+        "pageCount": "", 
+        "publishedDate": "1991", 
+        "industryIdentifiers": [
+            {
+                "identifier": "1563891719", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9781563891717", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Neil Gaiman", 
+        "title": "The Sandman: World's end : World's end, A tale of two cities, Cluracan's tale, Hob's leviathan, The golden boy, Cerements, World's end", 
+        "categories": [
+            "Comic books, strips, etc"
+        ]
+    }, 
+    {
+        "description": "", 
+        "pageCount": "", 
+        "publishedDate": "1991", 
+        "industryIdentifiers": [
+            {
+                "identifier": "1563890895", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9781563890895", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Neil Gaiman", 
+        "title": "The Sandman: Brief lives", 
+        "categories": [
+            "Comic books, strips, etc"
+        ]
+    }, 
+    {
+        "description": "", 
+        "pageCount": "", 
+        "publishedDate": "1991", 
+        "industryIdentifiers": [
+            {
+                "identifier": "1563890895", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9781563890895", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Neil Gaiman", 
+        "title": "The Sandman: Brief lives", 
+        "categories": [
+            "Comic books, strips, etc"
+        ]
+    }, 
+    {
+        "description": "", 
+        "pageCount": "", 
+        "publishedDate": "1991", 
+        "industryIdentifiers": [
+            {
+                "identifier": "0930289595", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9780930289591", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Neil Gaiman", 
+        "title": "The Sandman: Season of mists", 
+        "categories": [
+            "Comic books, strips, etc"
+        ]
+    }, 
+    {
+        "description": "", 
+        "pageCount": "", 
+        "publishedDate": "1991", 
+        "industryIdentifiers": [
+            {
+                "identifier": "0930289595", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9780930289591", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Neil Gaiman", 
+        "title": "The Sandman: Season of mists", 
+        "categories": [
+            "Comic books, strips, etc"
+        ]
+    }, 
+    {
+        "description": "", 
+        "pageCount": 887, 
+        "publishedDate": "1974", 
+        "industryIdentifiers": [
+            {
+                "identifier": "PSU:000022631671", 
+                "type": "OTHER"
+            }
+        ], 
+        "authors": "Thomas Pynchon", 
+        "title": "Gravity's Rainbow", 
+        "categories": ""
+    }, 
+    {
+        "description": "", 
+        "pageCount": 887, 
+        "publishedDate": "1974", 
+        "industryIdentifiers": [
+            {
+                "identifier": "PSU:000022631671", 
+                "type": "OTHER"
+            }
+        ], 
+        "authors": "Thomas Pynchon", 
+        "title": "Gravity's Rainbow", 
+        "categories": ""
+    }, 
+    {
+        "description": "Lost in the chill deeps of space between the galaxies, it sails on forever, a flat, circular world carried on the back of a giant turtle\u2014 Discworld \u2014a land where the unexpected can be expected. Where the strangest things happen to the nicest people. Like Brutha, a simple lad who only wants to tend his melon patch. Until one day he hears the voice of a god calling his name. A small god, to be sure. But bossy as Hell.", 
+        "pageCount": 400, 
+        "publishedDate": "2013-10-29", 
+        "industryIdentifiers": [
+            {
+                "identifier": "0062237373", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9780062237378", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Terry Pratchett", 
+        "title": "Small Gods", 
+        "categories": [
+            "Fiction"
+        ]
+    }, 
+    {
+        "description": "By Georges Perec.", 
+        "pageCount": 55, 
+        "publishedDate": "2010", 
+        "industryIdentifiers": [
+            {
+                "identifier": "0984115528", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9780984115525", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Georges Perec", 
+        "title": "An Attempt at Exhausting a Place in Paris", 
+        "categories": [
+            "Fiction"
+        ]
+    }, 
+    {
+        "description": "", 
+        "pageCount": 214, 
+        "publishedDate": "1979", 
+        "industryIdentifiers": [
+            {
+                "identifier": "0553134329", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9780553134322", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "Jerome David Salinger", 
+        "title": "The Catcher in the Rye", 
+        "categories": [
+            "New York (N.Y.)"
+        ]
+    }, 
+    {
+        "description": "\u56db\u56fd\u306e\u56f3\u66f8\u9928\u306b\u7740\u3044\u305f\u30ab\u30d5\u30ab\u5c11\u5e74\u304c\u51fa\u4f1a\u3063\u305f\u306e\u306f\u300130\u5e74\u524d\u306e\u30d2\u30c3\u30c8\u30bd\u30f3\u30b0\u3001\u590f\u306e\u6d77\u8fba\u306e\u5c11\u5e74\u306e\u7d75\u300115\u6b73\u306e\u7f8e\u3057\u3044\u5c11\u5973\u2015\u3002\u4e00\u65b9\u3001\u732b\u3068\u4ea4\u6d41\u304c\u3067\u304d\u308b\u8001\u4eba\u30ca\u30ab\u30bf\u3055\u3093\u3082\u3001\u30db\u30b7\u30ce\u9752\u5e74\u306b\u52a9\u3051\u3089\u308c\u306a\u304c\u3089\u65c5\u3092\u7d9a\u3051\u308b\u3002\u201c\u5165\u308a\u53e3\u306e\u77f3\u201d\u3092\u898b\u3064\u3051\u3060\u3057\u3001\u4e16\u754c\u3068\u4e16\u754c\u304c\u7d50\u3073\u3042\u308f\u3055\u308c\u308b\u306f\u305a\u306e\u5834\u6240\u3092\u63a2\u3059\u305f\u3081\u306b\u3002\u8b0e\u306e\u30ad\u30fc\u30ef\u30fc\u30c9\u304c\u4e8c\u4eba\u3092\u5c0e\u304f\u95c7\u306e\u4e16\u754c\u306b\u51fa\u53e3\u306f\u3042\u308b\u306e\u304b?\u6d77\u5916\u3067\u3082\u9ad8\u3044\u8a55\u4fa1\u3092\u53d7\u3051\u308b\u5091\u4f5c\u9577\u7bc7\u5c0f\u8aac\u3002", 
+        "pageCount": 528, 
+        "publishedDate": "2005-03", 
+        "industryIdentifiers": [
+            {
+                "identifier": "4101001553", 
+                "type": "ISBN_10"
+            }, 
+            {
+                "identifier": "9784101001555", 
+                "type": "ISBN_13"
+            }
+        ], 
+        "authors": "\u6751\u4e0a\u6625\u6a39", 
+        "title": "\u6d77\u8fba\u306e\u30ab\u30d5\u30ab", 
+        "categories": ""
     }
 ]
