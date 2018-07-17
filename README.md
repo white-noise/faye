@@ -1,7 +1,7 @@
 # project faye
 
 ## next steps
-- fixing css for mobile, and paring down all css to minimal needed (i.e., genericize)
+- fixing css for mobile (especially when hiding elements), and paring down all css to minimal needed (i.e., genericize)
 - specifically some of the :hover behavior is wonky right now
 - including home buttons in relevant pages
 - enabling smart back-paging (i.e., return to proper page of paginator object)
@@ -18,6 +18,8 @@
 - probably page numbers can be easily passed to individual templates for back-paging
 - should back-paging from referenced library objects be enabled? (can always use back gestures)
 - admin page aesthetics (e.g., horizontal filter for many to many relations)
+- I need to fix title case in book titles, and disply the rest of the fields
+- I need to make sure that the certbot requests are not above the allotted frequency
 
 ## deployment notes
 - currently I am being very lax with secret key storage and file transfer protocols
