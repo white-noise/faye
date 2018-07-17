@@ -10,7 +10,8 @@ from django.utils import timezone
 class LibraryObject(models.Model):
 
 	title       = models.CharField(max_length=200, default="n/a")
-	author      = models.CharField(max_length=200, default="n/a")
+	author      = models.CharField(max_length=100, default="n/a")
+	lastname    = models.CharField(max_length=100, default="n/a")
 	description = models.TextField(max_length=1000, default="")
 	pub_date    = models.DateTimeField('date published')
 	acq_date    = models.DateTimeField('date acquired',default=timezone.now)

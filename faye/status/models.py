@@ -11,7 +11,7 @@ from django.utils import timezone
 class StatusObject(models.Model):
 
 	status_title = models.CharField(max_length=200, default="update")
-	status_text  = models.TextField(max_length=5000, default="no text")
+	status_text  = models.TextField(max_length=5000, default="There is no text.")
 	pub_date     = models.DateTimeField('date published', default=timezone.now)
 
 	cited_works  = models.ManyToManyField('library.LibraryObject', blank=True)

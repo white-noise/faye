@@ -25,3 +25,4 @@
 - commands for my own memory: `sudo supervisorctl restart faye` (or `reread` or `update` or `status`), `sudo service nginx restart`
 - files for server care and upkeep include `/etc/supervisor/conf.d/faye.conf` and `gunicorn_start` and some linking in `/etc/nginx/...`
 - currently https is not enabled nor supported, and domain has not been pointed to the proper url
+- when pulled, static files should be collected by `python3 manage.py collectstatic`

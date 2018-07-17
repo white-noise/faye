@@ -7,10 +7,10 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 def index(request):
 
 	# specify first and last name fields in library model for last name sorting
-	author_library = LibraryObject.objects.order_by('title')
+	author_library = LibraryObject.objects.order_by('lastname')
 
 	# handling pagination
-	paginator     = Paginator(author_library, 8)
+	paginator     = Paginator(author_library, 12)
 	page          = request.GET.get('page')
 	page_library  = paginator.get_page(page)
 

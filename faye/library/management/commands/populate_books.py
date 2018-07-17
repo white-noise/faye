@@ -21,6 +21,7 @@ class Command(BaseCommand):
 		# provisional values (no datetime parsing)
 		for elem in json_obj:
 			authors       = elem["authors"]
+			lastname      = elem["authors"].split(" ")[-1]
 			title         = elem["title"]
 			categories    = elem["categories"]
 			description   = elem["description"]
@@ -61,7 +62,7 @@ class Command(BaseCommand):
 			# create a book object and save to database
 			# book = LibraryObject(title=title, author=authors, description=description, pub_date=publishedDate, acq_date=acqDate, ISBN_10=ISBN_10, ISBN_13=ISBN_13, pages=pageCount, pages_read=pagesRead, rating=rating)
 			# not using description
-			book = LibraryObject(title=title, author=authors,\
+			book = LibraryObject(title=title, author=authors, lastname=lastname,\
 			pub_date=publishedDate, acq_date=acqDate, ISBN_10=ISBN_10, ISBN_13=ISBN_13,\
 			pages=pageCount, pages_read=pagesRead, rating=rating)
 

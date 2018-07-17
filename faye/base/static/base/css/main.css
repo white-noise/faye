@@ -155,7 +155,7 @@ hr {
 .info {
 	color: #777;
 	margin: auto;
-	width: 500px;
+	width: 480px;
 	text-align: left;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -233,4 +233,8 @@ hr {
 
 .indented {
 	padding-left: 50px;
+}
+
+.indented > .info {
+	width: 430px;
 }
