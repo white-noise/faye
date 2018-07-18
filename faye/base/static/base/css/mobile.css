@@ -68,8 +68,8 @@ hr {
 	padding-bottom:0px; 
 	position: relative;
 	left: 0px;
-	text-align: left;
-	font-size: 20px;
+	text-align: center;
+	font-size: 1.1em;
 }
 
 .eig-hr {
@@ -194,7 +194,7 @@ hr {
 }
 
 .float_text {
-	width: 75%;
+	width: 100%;
 	float: left;
 }
 

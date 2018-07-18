@@ -21,10 +21,10 @@
 				{% if recent_written %}
 				<li class="indented"> 
 					<div class="info_text">
-						Most recent:
-						<a href="{% url 'produce:written_individual' recent_written.0.pk %}">
+						<a style="color: #777 ;" href="{% url 'produce:written_individual' recent_written.0.pk %}">
 							{{ recent_written.0.title }}
 						</a>
+						<span>(most recent)</span>
 					<br>
 						<a href="{% url 'produce:written_individual' recent_written.0.pk %}">
 							{{ recent_written.0.description }}
@@ -47,9 +47,10 @@
 				<li class="indented"> 
 					<div class="info_text">
 						Most recent:
-						<a href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
+						<a style="color: #777 ;" href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
 							{{ recent_visual.0.title }}
 						</a>
+						<span>(most recent)</span>
 					<br>
 						<a href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
 							{{ recent_visual.0.description }}
