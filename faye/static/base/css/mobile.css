@@ -1,0 +1,230 @@
+/* zane marius rossi, 2016-18 */
+/* for mobile (wd lt 500 px) */
+
+html, body {
+	background-color: black;
+	color: #AAA;
+	font-family: 'Open Sans', sans-serif;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
+
+a {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #777;
+}
+
+li {
+	padding-bottom: 0.5em;
+	list-style: none;
+}
+
+span {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	color: #333;
+}
+
+span:hover {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	color: #777;
+}
+
+hr {
+	border-color: #333;
+	color: #333;
+	width: 100%;
+}
+
+::selection {
+  background: #777;
+}
+::-moz-selection {
+  background: #777;
+}
+
+.eig-main-nav {
+	text-align: center;
+	display: inline-block;
+	width: 23%;
+}
+
+.eig-name-plate {
+	padding-bottom:0px; 
+	position: relative;
+	left: 0px;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.eig-hr {
+	width: 100%;
+	border-color: #333;
+	color: #333;
+}
+
+.eig-main {
+	padding-top: 200px;
+	width: 100%;
+	margin: auto;
+}
+
+.eig-logo {
+	width: 300px;
+	height: 144px;
+	margin: auto;
+	background-size: contain;
+	background-image: url("../img/eig.gif");
+	background-repeat: no-repeat;
+}
+
+.eig-nav-plate {
+	margin: auto;
+	width: 100%;
+	font-size: 1em;
+}
+
+.eig-footer {
+	display: none;
+}
+
+.wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+}
+
+.content {
+	margin: auto;
+	width: 80%;
+}
+
+.heading {
+	color:#AAA;
+	padding-top: 100px;
+	width: 100%;
+	display: block;
+	margin: auto;
+}
+
+.sub-heading {
+	color:#AAA;
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+
+.arrow_nav {
+	width: 100%;
+}
+
+.arrow_nav_l {
+	float: left;
+}
+
+.arrow_nav_r {
+	float: right;
+}
+
+.page_num {
+	color: #333 !important;
+	padding-left: 50px;
+}
+
+
+.info {
+	color: #777;
+	margin: auto;
+	width: 100%;
+	text-align: left;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+.nav-plate {
+	margin: auto;
+	width: 100%;
+}
+
+.nav {
+	padding-top: 10px;
+	padding-bottom: 50px;
+	margin: auto;
+	text-align: center;
+}
+
+.dual-nav {
+	display: inline-block;
+	width: 240px;
+	padding-bottom: 50px;
+	margin: auto;
+	text-align: center;
+}
+
+.footer {
+	display: none;
+}
+
+.float_title {
+	color: #777 !important;
+	padding-bottom: 0.5em;
+}
+
+.float_title > a {
+	color: #777 !important;
+}
+
+.float_text {
+	width: 100%;
+	float: left;
+}
+
+.float_date {
+	float: right;
+	display: none;
+}
+
+.citations {
+
+}
+
+.info_text {
+	padding-bottom: 0.5em;
+}
+
+.info_text_dark {
+	color: #333;
+	padding-bottom: 0.5em;
+}
+
+.info_date {
+	padding-bottom: 0.5em;
+}
+
+.info_img {
+	width: 100%;
+	margin: 0;
+}
+
+.indented {
+	padding-left: 20px;
+}
