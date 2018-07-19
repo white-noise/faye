@@ -55,6 +55,12 @@ class Command(BaseCommand):
 					ISBN_10 = 0 # default
 					ISBN_13 = 0 # default
 
+			# processing null page count
+			if pageCount == "":
+				pageCount = "0"
+
+			# processing null author
+
 			pagesRead = 0 # default
 			acqDate   = timezone.now() # default
 			rating    = 0

@@ -2,8 +2,7 @@
 
 ## next steps
 - fixing css for mobile (especially when hiding elements), and paring down all css to minimal needed (i.e., genericize)
-- specifically some of the :hover behavior is wonky right now
-- including home buttons in relevant pages
+- including true home buttons in relevant pages
 - enabling smart back-paging (i.e., return to proper page of paginator object)
 - enabling reasonable sorting methods for library contents (i.e., alphabetical by last name, by pub date, by acq date)
 - it might be edifying to include an integrated email form (I don't prefer the idea of comments or posting).
@@ -13,6 +12,9 @@
 - standardize the hierarchy of page content (i.e., how subheadings interact with info, etc.)
 - specialty pages within the library app (keep minimal: e.g., especially recommended, new)
 - medium term: separate books and authors into parent and child objects, independently groupable, assignable, etc.
+- I can also permit script in posts (safe by how they're uploaded)
+- title case should be applied to book titles, and null fields from the google books ping can be handled in populate_books
+- book categories aren't currently implemented
 
 ## notes
 - probably page numbers can be easily passed to individual templates for back-paging
@@ -28,3 +30,4 @@
 - files for server care and upkeep include `/etc/supervisor/conf.d/faye.conf` and `gunicorn_start` and some linking in `/etc/nginx/...`
 - currently https is not enabled nor supported, and domain has not been pointed to the proper url
 - when pulled, static files should be collected by `python3 manage.py collectstatic`
+- when reloading the library `python3 manage.py flush` followed by `createsuperuser` and `populate_books`
