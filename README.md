@@ -23,6 +23,7 @@
 - admin page aesthetics (e.g., horizontal filter for many to many relations)
 - I need to fix title case in book titles, and disply the rest of the fields
 - I need to make sure that the certbot requests are not above the allotted frequency
+- git ssh key needs authenticating
 
 ## deployment notes
 - currently I am being very lax with secret key storage and file transfer protocols
