@@ -15,6 +15,7 @@
 - I can also permit script in posts (safe by how they're uploaded)
 - title case should be applied to book titles, and null fields from the google books ping can be handled in populate_books
 - book categories aren't currently implemented
+- standardize the git flow from local machine to webserver
 
 ## notes
 - probably page numbers can be easily passed to individual templates for back-paging
