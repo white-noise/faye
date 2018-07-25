@@ -1,6 +1,6 @@
 # project faye
 
-## next steps
+## next steps (general)
 - fixing css for mobile (especially when hiding elements), and paring down all css to minimal needed (i.e., genericize)
 - including true home buttons in relevant pages
 - enabling smart back-paging (i.e., return to proper page of paginator object)
@@ -15,9 +15,29 @@
 - I can also permit script in posts (safe by how they're uploaded)
 - title case should be applied to book titles, and null fields from the google books ping can be handled in populate_books
 - book categories aren't currently implemented
-- standardize the git flow from local machine to webserver
+- standardize the git flow from local machine to webserver (this seems to have been resolved)
 
-## notes
+### status updates
+- I am debating whether statuses should accept text as clean (and thus render html). the single paragraph format keeps me honest, though a lack of links can hurt
+- regardless, statuses should be able to have tags in addition to citations, though these should be strictly limited
+
+### library updates
+- need to bring current collection up to date, remove duplicates, and standardize json loading process
+- books should show some sort of placeholder for description, remove pages read inclusion, and show rating or something
+- ideally there should be a method to reload changes in the database back into the json static file, for maximal redundancy
+- changes currently should only be made to the json file!
+
+### produce updates
+- the format on the written and visual landing page can be changed to look a little cleaner (maybe float recent tag)
+- possibly metacommentary on stories should be allowed (far future). descriptions suffice for now
+- enable sorting by different keys (keep it minimal and static; paginated?: no searching: people should be subjected)
+
+### misc app updates
+- consider removing transition speeds, so that the whole thing becomes more clicky (currently implemented)
+- requent acquisitions section in library app?
+- consider a series of regression tests for core functionality; consider automated library reload
+
+## notes (general)
 - probably page numbers can be easily passed to individual templates for back-paging
 - should back-paging from referenced library objects be enabled? (can always use back gestures)
 - admin page aesthetics (e.g., horizontal filter for many to many relations)
@@ -25,7 +45,7 @@
 - I need to make sure that the certbot requests are not above the allotted frequency
 - git ssh key needs authenticating
 
-## deployment notes
+## deployment notes (and personal reminders)
 - currently I am being very lax with secret key storage and file transfer protocols
 - hosting currently moves key elsewhere and uses let's encrypt and certbot for https
 - commands for my own memory: `sudo supervisorctl restart faye` (or `reread` or `update` or `status`), `sudo service nginx restart`
