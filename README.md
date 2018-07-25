@@ -29,19 +29,19 @@
 
 ### produce updates
 - the format on the written and visual landing page can be changed to look a little cleaner (maybe float recent tag)
-- possibly metacommentary on stories should be allowed (far future). descriptions suffice for now
+- possibly meta-commentary on stories should be allowed (far future). descriptions suffice for now
 - enable sorting by different keys (keep it minimal and static; paginated?: no searching: people should be subjected)
 
 ### misc app updates
 - consider removing transition speeds, so that the whole thing becomes more clicky (currently implemented)
-- requent acquisitions section in library app?
+- recent acquisitions section in library app?
 - consider a series of regression tests for core functionality; consider automated library reload
 
 ## notes (general)
 - probably page numbers can be easily passed to individual templates for back-paging
 - should back-paging from referenced library objects be enabled? (can always use back gestures)
 - admin page aesthetics (e.g., horizontal filter for many to many relations)
-- I need to fix title case in book titles, and disply the rest of the fields
+- I need to fix title case in book titles, and display the rest of the fields
 - I need to make sure that the certbot requests are not above the allotted frequency
 - git ssh key needs authenticating
 
