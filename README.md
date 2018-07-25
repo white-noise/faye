@@ -16,6 +16,7 @@
 - title case should be applied to book titles, and null fields from the google books ping can be handled in populate_books
 - book categories aren't currently implemented
 - standardize the git flow from local machine to webserver (this seems to have been resolved)
+- uploading my resume, which I seem to have dropped in transit
 
 ### status updates
 - I am debating whether statuses should accept text as clean (and thus render html). the single paragraph format keeps me honest, though a lack of links can hurt
@@ -28,7 +29,7 @@
 - changes currently should only be made to the json file!
 
 ### produce updates
-- the format on the written and visual landing page can be changed to look a little cleaner (maybe float recent tag)
+- the format on the written and visual landing page can be changed to look a little cleaner (maybe float recent tag, remove date)
 - possibly meta-commentary on stories should be allowed (far future). descriptions suffice for now
 - enable sorting by different keys (keep it minimal and static; paginated?: no searching: people should be subjected)
 
@@ -43,7 +44,7 @@
 - admin page aesthetics (e.g., horizontal filter for many to many relations)
 - I need to fix title case in book titles, and display the rest of the fields
 - I need to make sure that the certbot requests are not above the allotted frequency
-- git ssh key needs authenticating
+- can and should cron on the webserver be used to make periodic pushes?
 
 ## deployment notes (and personal reminders)
 - currently I am being very lax with secret key storage and file transfer protocols
