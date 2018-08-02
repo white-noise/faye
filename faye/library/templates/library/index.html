@@ -84,6 +84,48 @@
 		{% endif %}
 	</div>
 
+	<div class="sub-heading">
+		<h2>
+			<div class="arrow_nav">
+			{% if page_library.has_previous and not page_library.has_next%}
+				<div class="arrow_nav_l">
+					<a href="?page=1"><<  </a>
+					<a href="?page={{ page_library.previous_page_number }}">< </a>
+				</div>
+				<div class="arrow_nav_r">
+					<a href="#"> ></a>
+					<a href="#"> >></a>
+				</div>
+				<div style="clear: both;"></div>
+			{% endif %}
+
+			{% if page_library.has_next and not page_library.has_previous %}
+				<div class="arrow_nav_l">
+					<a href="#"><< </a>
+					<a href="#">< </a>
+				</div>
+				<div class="arrow_nav_r">
+					<a href="?page={{ page_library.next_page_number }}"> ></a>
+					<a href="?page={{ page_library.paginator.num_pages }}"> >></a>
+				</div>
+				<div style="clear: both;"></div>
+			{% endif %}
+
+			{% if page_library.has_next and page_library.has_previous %}
+				<div class="arrow_nav_l">
+					<a href="?page=1"><< </a>
+					<a href="?page={{ page_library.previous_page_number }}">< </a>
+				</div>
+				<div class="arrow_nav_r">
+					<a href="?page={{ page_library.next_page_number }}"> ></a>
+					<a href="?page={{ page_library.paginator.num_pages }}"> >></a>
+				</div>
+				<div style="clear: both;"></div>
+			{% endif %}
+			</div>
+		</h2>
+	</div>
+
 	<div class="nav">
 		<a href="{% url 'base:index' %}">back</a>
 		<span class="page_num">

@@ -18,10 +18,9 @@
 			<div class="info_date">
 				{{ status.pub_date|date:"m/d/y (H:s)" }}
 			</div>
+			<!-- use of a span around the text will permit mouseover change -->
 			<div class="info_text">
-				<span>
-					{{ status.status_text }}
-				</span>
+				{{ status.status_text|safe }}
 			</div>
 		</div>
 	{% else %}

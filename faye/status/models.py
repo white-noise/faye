@@ -17,7 +17,5 @@ class StatusObject(models.Model):
 
 	cited_works  = models.ManyToManyField('library.LibraryObject', blank=True)
 
-	# eventually may want many to many relationship to library objects
-
 	def __str__(self):
 		return self.status_title

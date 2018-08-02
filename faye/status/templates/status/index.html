@@ -86,6 +86,48 @@
 				{% endif %}
 			</div>
 
+			<div class="sub-heading">
+				<h2>
+					<div class="arrow_nav">
+					{% if recent_status.has_previous and not recent_status.has_next%}
+						<div class="arrow_nav_l">
+							<a href="?page=1"><<  </a>
+							<a href="?page={{ recent_status.previous_page_number }}">< </a>
+						</div>
+						<div class="arrow_nav_r">
+							<a href="#"> ></a>
+							<a href="#"> >></a>
+						</div>
+						<div style="clear: both;"></div>
+					{% endif %}
+
+					{% if recent_status.has_next and not recent_status.has_previous %}
+						<div class="arrow_nav_l">
+							<a href="#"><< </a>
+							<a href="#">< </a>
+						</div>
+						<div class="arrow_nav_r">
+							<a href="?page={{ recent_status.next_page_number }}"> ></a>
+							<a href="?page={{ recent_status.paginator.num_pages }}"> >></a>
+						</div>
+						<div style="clear: both;"></div>
+					{% endif %}
+
+					{% if recent_status.has_next and recent_status.has_previous %}
+						<div class="arrow_nav_l">
+							<a href="?page=1"><< </a>
+							<a href="?page={{ recent_status.previous_page_number }}">< </a>
+						</div>
+						<div class="arrow_nav_r">
+							<a href="?page={{ recent_status.next_page_number }}"> ></a>
+							<a href="?page={{ recent_status.paginator.num_pages }}"> >></a>
+						</div>
+						<div style="clear: both;"></div>
+					{% endif %}
+					</div>
+				</h2>
+			</div>
+
 			<div class="nav">
 				<a href="{% url 'base:index' %}">back</a>
 				<span class="page_num">

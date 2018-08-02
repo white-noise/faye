@@ -10,7 +10,7 @@ def index(request):
 	recent_status = StatusObject.objects.order_by('-pub_date')
 
 	# pagination
-	paginator     = Paginator(recent_status, 3)
+	paginator     = Paginator(recent_status, 12)
 	page          = request.GET.get('page')
 	recent_status = paginator.get_page(page)
 
@@ -20,7 +20,7 @@ def index(request):
 	# template = loader.get_template('status/index.html')
 	# # for use of non-shortcut methods (better control)
 	# context = {
-	# 	'recent_status' : recent_status,
+	#   'recent_status' : recent_status,
 	# }
 	# return HttpResponse(template.render(context, request))
 
