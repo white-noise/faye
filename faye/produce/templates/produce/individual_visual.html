@@ -15,10 +15,10 @@
 
 	<div class="info">
 		<div class="info_text">
-			This is the visual individual {{ visual_object.pk }}.	
+			<img src="{{ visual_object.content.url }}" class="info_img">	
 		</div>
 		<div class="info_text">
-			<img src="{{ visual_object.content.url }}" class="info_img">	
+			{{ visual_object.description }}
 		</div>
 	</div>
 
