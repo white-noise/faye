@@ -1,0 +1,65 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/walkman.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					No sound, of course.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					I need headphones. I check in the other pocket of the jacket. Nothing. I check in the breast-pocket.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					A small pair of headphones, knotted with itself.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					I untie them, plug them in, and press play.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					At first only static. Then a scraping noise, like chairs being moved across a floor. I hear my dad’s clipped low voice, and then the tape breaks into singing “Happy Birthday.” It’s being sung to me.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<a href="{% url 'produce:hypertext_individual' '22' %}">
+					There are at least three voices, the sounds of shuffling feet, straining high notes. The song’s final croon folds up into silence and static, and I hear someone, the young me, blowing out candles. I am asked how old I am. It’s my dad asking. He tries to ask me about my wish, but I don’t tell him. I am being taunted. He starts to ask again but the sound cuts. Quiet. I press stop.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

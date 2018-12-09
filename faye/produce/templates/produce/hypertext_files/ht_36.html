@@ -1,0 +1,105 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					The kabocha stays silent.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					“I’m going to tell one of my own stories,” the kabocha says.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					The kabocha begins but I put my headphones back on, not caring for whatever it was going to try and teach me. I realize very firmly I don’t want to be taught. In part I was tired of our passage, but in another sense I wanted to hear your voice again. Wanted to remember everything you ever said to me.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					After another stretch of silent tape, and then you start saying things again. We must be outside, because there is the sound of wind and trees rustling and birds I can’t name but which you always could. You must be yelling to me, far off. Saying that I am doing such a good job. Maybe I am riding a bike, or pumping my legs on a swingset, or using a drinking fountain by myself for the first time. You are telling me that I am doing a good job and that you are so proud of me. I can’t see the park that we are in but it sounds beautiful, with a specificity I thought it not possible for sound alone to provide.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					The tape cuts.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					I take my headphones off and the pumpkin is still speaking:
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan" onclick="progText('d7')">
+					“The mother calls out for her child, who is maybe playing far off on a swingset or digging a hole in the sand, encouraging the child and profusely yelling that she is proud of them, their growth, in their impressing on her this moment which, from the future, will appear as a beacon of the child’s latent precocity. As a sign of future success and the child’s innate, truly empathic goodness.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d7">
+				<span class="progSpan" onclick="progText('d8')">
+					“You’ve been eavesdropping,” I tell the kabocha, “that is what I’ve been listening to.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d8">
+				<span class="progSpan" onclick="progText('d9')">
+					The kabocha halts its story. “Oh quite the contrary; you must have been dozing off. You must have confused my story with your own. I was just telling you something I once heard someone tell to me, at the shrine. You must have been tired and, in your tiredness, projected my own story onto your own.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d9">
+				<span class="progSpan" onclick="progText('d10')">
+					“There are no tricks here, kabocha,” I say.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d10">
+				<span class="progSpan" onclick="progText('d11')">
+					“Then you are probably going to say, after you listen to the next recording, that it is about a child and a mother in a garden, with the mother explaining to the child how plants grow—how different times of year bring different, special, but fleeting plants. She will probably use it to teach the child patience, and the fragility of things which, in the eyes of some, are merely thing to be bought and demanded.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d11">
+				<span class="progSpan" onclick="progText('d12')">
+					I continue to walk.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d12">
+				<span class="progSpan" onclick="progText('d13')">
+					“Put your headphones on and listen,” says the kabocha.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d13">
+				<a href="{% url 'produce:hypertext_individual' '37' %}">
+					And I do.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

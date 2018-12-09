@@ -1,0 +1,65 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					At the end of the alley is a courtyard, surrounded by buildings on every side. Their stuccoed back walls are featureless, and anyway obscured by old trees. Their roots crumple and fold against large irregular bricks that instead of the meticulous asphalt of the road. It is like everything has turned its back on this place.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					It is a small shrine. Some minor god. I don’t really know.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					But you used to come here.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					Maybe just because it was on your way home from work. A stop before the train. Or because it reminded you of something. When I was along, I would stand in the corner by the big stone lantern and wait. You would throw a coin in and we would leave. It could’t have been more than two minutes.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					I have gotten here a little too late, though. Almost everything from the autumn festivals has been cleared away. I poke at a paper scrap tied to a lattice of wood. I stare at the moss by the base of a painted wooden thing I don’t really understand. Bits of red lacquer have started to peel away.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<a href="{% url 'produce:hypertext_individual' '20' %}">
+					I go stand by the stone lantern.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

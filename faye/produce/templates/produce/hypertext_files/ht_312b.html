@@ -1,0 +1,59 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/pumpkin_eyes.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					“What does it matter to you? Do you really care about my journey? You need not, if you wish not.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					I know that in my haste I did not ask much of the kabocha. But I don’t think that means it means nothing to me. It was just that I could not know where it was taking me.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<a href="#" id="switchLink">
+					I tell the kabocha, “I want to listen to you. I want more than just one story of your life. I want to tell you the truth of my life and listen to the truth of yours.”
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+
+	var y = document.getElementById("switchLink");
+
+	if(sessionStorage.lie == "no"){
+		y.href = "{% url 'produce:hypertext_individual' '313a' %}";
+	} else {
+		y.href = "{% url 'produce:hypertext_individual' '313c' %}";
+	}
+
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

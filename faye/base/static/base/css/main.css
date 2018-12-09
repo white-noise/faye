@@ -238,3 +238,50 @@ hr {
 .indented > .info {
 	width: 430px;
 }
+
+.ht_img {
+	margin-left: 50%;
+	transform: translateX(-50%);
+	padding-bottom: 1em;
+}
+
+.ht_info_text {
+	padding-bottom: 1em;
+}
+
+.progSpan {
+  cursor: pointer;
+  color: #555;
+}
+
+.progSpan a {
+	font-weight: bold;
+	color: #600;
+}
+
+.choice {
+	font-weight: bold;
+	color: #600;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+.fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+/*.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}*/

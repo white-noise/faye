@@ -1,0 +1,70 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					“I don’t think this way leads to a road,” I say, “We must be between two buildings still.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					“It takes us to where we need to go.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					“And where is that?” I ask.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					“Just a ways further. The journey is not a long one. People think it is, but it’s not. Why don’t you play your tape, while we are walking. The one from before.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					“I would prefer not to,” I say.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					“While this journey is not long, child, it feels even shorter if you listen to what you came here with. This place is not so strange, or so beyond belief, but it is certainly a place which, once entered, must be left. And things which are brought in should be used. It is like how you might want a story to be. Everything has a place.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan">
+					I can either <a href="{% url 'produce:hypertext_individual' '32a' %}">play the tape</a>, or ask the pumpkin instead for a <a href="{% url 'produce:hypertext_individual' '32b' %}">story of its own</a>.
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

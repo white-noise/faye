@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/forest.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					I walk off toward the trees. They come faster than expected, and soon my feet are surrounded by tough grass, firmer and more resisting than what filled the cemetery. Grass becomes shrubs, which become trees, and soon the canopy only permits brief glimpses of starlight. The candle in my hand seems to grow in brightness, but it can’t illuminate every shadow.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					The path is easy to lose, though every time I worry that I have strayed off it, the ground ahead seems to reveal some secret sign that assures me I am tending toward somewhere.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					Then I come upon a tree.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<a href="{% url 'produce:hypertext_individual' '41b' %}">
+					And you are in the tree.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

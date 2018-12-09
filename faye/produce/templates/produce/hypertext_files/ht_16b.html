@@ -1,0 +1,83 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					The waxy leaves are blue black in the light. All the vines are twisted around each other. I wonder if someone could train vines to be like this, or if it took some sort of careful disinterest. I can’t imagine that this formed while anyone was looking. It’s too wild. Maybe my looking has stopped it in its tracks.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					I hear a sound.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					It’s coming from under the hedge. I wait.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					No more sound comes.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					I approach the entryway to the alley, and crouch down. I don’t think it is being brave so much as trying to understand whatever fears I can. There are plenty of fears I can’t know, no matter how much I lean in toward them.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					A black cat steps out from the bush, looking at me.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan" onclick="progText('d7')">
+					I startle backwards, and something clatters from my jacket pocket onto the street. The cat, frightened at the noise, slips into a bullet of darkness down the street. It tangles itself with the shadows and disappears.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d7">
+				<span class="progSpan" onclick="progText('d8')">
+					I reach for what fell.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d8">
+				<span class="progSpan" onclick="progText('d9')">
+					It’s a tape player, Walkman brand. What you used to sell.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d9">
+				<a href="{% url 'produce:hypertext_individual' '17' %}">I continue into the alley.</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

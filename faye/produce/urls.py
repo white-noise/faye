@@ -10,4 +10,5 @@ urlpatterns = [
 	path("visual/", views.visual, name="visual"),
 	path("written/<int:produce_id>/", views.written_individual, name="written_individual"),
 	path("visual/<int:produce_id>/", views.visual_individual, name="visual_individual"),
+	path("hypertext/<str:hypertext_id>/", views.hypertext_individual, name="hypertext_individual"),
 ]

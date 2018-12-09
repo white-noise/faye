@@ -1,0 +1,162 @@
+<!-- this file is filled with a bunch of for-use pieces -->
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+		// testing if an event or choice came to pass
+		if (div_id == 'd2'){
+			sessionStorage.visited = "yes"
+		} else {
+			sessionStorage.visited = "no"
+		}
+	}
+</script>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+		// testing if an event or choice came to pass
+		if (div_id == 'd2'){
+			sessionStorage.visited = "yes"
+		} else {
+			sessionStorage.visited = "no"
+		}
+	}
+</script>
+
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/kabocha_title.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				First moment. <span class="progSpan" onclick="progText('d1')">Here</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				Second moment. <span class="progSpan" onclick="progText('d2')">Here</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				Third moment. <a href="{% url 'produce:hypertext_individual' '02' %}">And link to 01.</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'base:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+		// testing if an event or choice came to pass
+		if (div_id == 'd2'){
+			sessionStorage.visited = "yes"
+		} else {
+			sessionStorage.visited = "no"
+		}
+	}
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+<!-- generic page without image -->
+
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<!-- <div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/kabocha_title.gif' %}" class="ht_img">	
+	</div> -->
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan" onclick="progText('d7')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d7">
+				<span class="progSpan" onclick="progText('d8')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d8">
+				<span class="progSpan" onclick="progText('d9')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d9">
+				<span class="progSpan" onclick="progText('d10')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d10">
+				<span class="progSpan" onclick="progText('d11')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d11">
+				<span class="progSpan" onclick="progText('d12')"></span>
+			</div>
+			<div class="ht_info_text hidden" id="d12">
+				<a href="{% url 'produce:hypertext_individual' 'XX' %}"></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

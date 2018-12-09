@@ -1,0 +1,85 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					“I can’t do that.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					“Why can’t you?” The kabocha asks.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					“Because what business do I have moving anything from the world of the living to that of the dead?”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					The kabocha ponders, long enough that I begin to wonder if I am not just tired, and have begun to talk to a kabocha pumpkin simply because it had a face. After a bout of silence, though, the kabocha responds.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					“I see,” the kabocha says, “then, in that case, I have another request.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					I wait for the kabocha to finish.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan" onclick="progText('d7')">
+					“I will tell you something about yourself, and if I am correct, then you must carry me just outside the walls of this place. And if it is not, then you can leave, and I will continue to wait here so that someday, perhaps, during the most brutal winter storm or summer typhoon, I might be able to die.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d7">
+				<span class="progSpan" onclick="progText('d8')">
+					I glance over to where the kabocha had seemed to look, or rather toward where its flames had bent. I could see another hedge crowding a gap to outside this small shrine. I could carry the kabocha, if it meant an end to this. It had shown me kindness and patience. And to turn down the strange was to be forever followed by it later.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d8">
+				<span class="progSpan" onclick="progText('d9')">
+					“I can agree to that,” I say.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d9">
+				<a href="{% url 'produce:hypertext_individual' '27' %}">
+					“Excellent,” it says, “Then let me think.”
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

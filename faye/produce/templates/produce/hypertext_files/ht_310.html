@@ -1,0 +1,90 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/pumpkin_flash.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					“Is there a stone you like best?” the kabocha asks, “Pick one.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					We walk up the hill. I push my dad’s coat back over my shoulders, holding the kabocha with two hands now in the chilly open air. There is no wind, and so I don’t worry about its eyes. In fact, I am not sure what I should be worrying about. The ground is firm but nowhere level.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					I choose a medium-sized, four-sided grave marker. Its precise edges have begun to round against the seasons.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					“Is here all right?” I ask the kabocha.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					“Here is perfect,” I hear from my hands. “Place me at its base now.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					I neatly place the kabocha at the base of the grave stone, turning it so that its eyes face outward. I look into them again, and I can find no difference in the candles, whose languid flames flow around like water in its eyes.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan" onclick="progText('d7')">
+					“It is like the ocean out here, isn’t it,” says the kabocha, seemingly seeing my thoughts.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d7">
+				<span class="progSpan" onclick="progText('d8')">
+					“These fields of grass,” it says, “bending under the wind, always remind me of the rolling surface of the sea. Or how I imagine it must be. And I always imagined that, when set down here, it would be like floating in a vast ocean.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d8">
+				<span class="progSpan" onclick="progText('d9')">
+					“And is it?” I ask.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d9">
+				<span class="progSpan" onclick="progText('d10')">
+					The kabocha pumpkin’s eyes bend to the left and to the right, under forces I cannot see.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d10">
+				<a href="{% url 'produce:hypertext_individual' '311' %}">
+					“I have never seen the sea. But like I said, child, this is strange grass.”
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

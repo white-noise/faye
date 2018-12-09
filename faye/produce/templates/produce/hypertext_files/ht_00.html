@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info">
+		<p>
+			"Surviving the dead depends on our ability to slowly and purposefully forget them—"
+		</p>
+		<p>
+			"The virtual often seems to offer less a mode of mourning and release than a Sisyphean process of endless proliferation and compulsive repetition and return, the mechanical reproduction of the image gone wild—"
+		</p>
+		<p>
+			– <em>To Scan a Ghost: The Ontology of Mediated Vision (T. Gunning).</em>
+		</p>
+		<p>
+			<a href="{% url 'produce:hypertext_individual' '01' %}">Begin.</a>
+		</p>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+{% endblock %}

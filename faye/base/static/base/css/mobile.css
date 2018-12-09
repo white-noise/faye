@@ -228,3 +228,24 @@ hr {
 .indented {
 	padding-left: 20px;
 }
+
+.ht_img {
+	width: 100%;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	padding-bottom: 1em;
+}
+
+.ht_info_text {
+	padding-bottom: 0.5em;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.progSpan {
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+}

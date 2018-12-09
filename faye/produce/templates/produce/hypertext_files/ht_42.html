@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					The walk is almost too short back to the shrine. But distance is not how I thought it was. The world is connected by invisible shortnesses. I wish I could say that I dwelled there, in the shrine, and looked for signs of what had come to pass, or read scripture on the walls, or signs in the stars, but I just continued through.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					I had stood by the stone lantern long enough, in the past. And in a way, this time was no different.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<a href="{% url 'produce:hypertext_individual' '43' %}">
+					I do check the small stone house. But it is empty.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

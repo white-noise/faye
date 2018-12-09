@@ -1,0 +1,80 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					A small glow.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					The surface of the rough stone lantern jitters under the unstable flame. Cavities and protuberances boil in and out of existence. It hasn’t occurred to me before how alive fire is.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					I try to imagine that the flame is a candle from my birthday, all those years ago. As if I could somehow pull one through time, along with the streamers, the cake, guests I don’t remember, and whatever silent secrets are communicated between the adults at children’s parties, over the heads of their happy, screaming kids. I want the flame to be the same, but no matter what it’s different. The lighter starts to burn my thumb.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					I let it keep burning a little.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					I feel stupid.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					“Please leave,” I hear something say.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan" onclick="progText('d7')">
+					I let the flame die. Darkness rushes back. I ask if anyone is out there, surprised at how I sound: that I make a sound at all. No response comes. I light the lighter again.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d7">
+				<span class="progSpan" onclick="progText('d8')">
+					“Please, leave me be.” I hear.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d8">
+				<a href="{% url 'produce:hypertext_individual' '24' %}">
+					The sound is coming from behind the base of the stone lantern. I crouch, holding the lighter in front of me like a weapon. Behind the lantern is a small adjoining stone structure, about the size of a microwave oven, with an open front and a small stone roof. It is like its own miniature shrine: the ones you find on roadsides or in forests, by small towns or near the ocean. Small alcoves of the unfrequented.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

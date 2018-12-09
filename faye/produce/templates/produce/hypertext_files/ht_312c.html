@@ -1,0 +1,69 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/pumpkin_eyes.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					“I think I do. Though I am hesitant to say that I am, in a way, frightened. Or unsure. But you have asked me for many stories of my own, and it feels only right to tell you what I am feeling now.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					“What will happen to you, when I leave you here? In truth?”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					“I will forget who I am,” says the kabocha, “I will do whatever things do when they die. I will make a difference, if only in having had a beginning and an end. In being between two gulfs of non-existence.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					“Is that enough?” I ask, “Against the pain it causes others?”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<a href="#" id="switchLink">
+					“Absence informs presence, if that makes sense, child, but it is also the root of all cruelty. I do not know the answer to your question. Just that I am here, and sometime later, I will be not.”
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+
+	var y = document.getElementById("switchLink");
+
+	if(sessionStorage.lie == "no"){
+		y.href = "{% url 'produce:hypertext_individual' '313a' %}";
+	} else {
+		y.href = "{% url 'produce:hypertext_individual' '313b' %}";
+	}
+
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

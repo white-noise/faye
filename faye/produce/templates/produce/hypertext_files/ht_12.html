@@ -1,0 +1,60 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					The roads are perfectly painted. I’ve always liked this, even if it seems like the paint gets neater when times get worse. As if everyone drops what they are doing and goes to work on them.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					Although of course that’s not true. People keep on doing what they’ve been doing.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					I cross over crisply painted crosswalks and past highly reflective road signs that, at this time of night, glow murkily. It’s not as bright here as in the major cities. I can still see some stars, and the moon. I can see the glow of some larger city to the east.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					It is the first day of November, and the trees are starting to drop their leaves.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<a href="{% url 'produce:hypertext_individual' '13' %}">
+					Everything seems a little like it is dying.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

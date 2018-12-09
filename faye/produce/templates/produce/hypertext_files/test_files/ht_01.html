@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+
+	<div class="info_text">
+		{% load static %}		
+		<img onclick="progText('d0')" src="{% static 'produce/ht_images/kabocha_title.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text hidden" id="d0">
+				<a href="{% url 'produce:hypertext_individual' '02' %}">Continue.</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+		// testing if an event or choice came to pass
+		if (div_id == 'd2'){
+			sessionStorage.visited = "yes"
+		} else {
+			sessionStorage.visited = "no"
+		}
+	}
+</script>
+
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/graveyard_moon.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					We emerge into a clearing. If there was a city around us, I would not have known it. And when I say it was a clearing, I mean there were no large trees. The ground was not flat but rolling, a small hill pushing toward the black sky. Nested in the folds of the hill were gravestones and other stone detritus, maybe the remains of walls, or even older structures on top of which the most recent ruins sat. Long grass shot up around the stones, as if to soften the transition between the hills and the toothy forms.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					It was calm, in the way that my thoughts about death often were, at least in contrast to the upheaval I felt was so easily assigned to the topic. Simultaneously the clearing was a process of or movement toward destruction, and a static diorama.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					“We are here,” the kabocha says, “Never so long a journey as you think.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					I stand still.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					“Be careful not to keep in one place too long,” says the kabocha, “The grass here is strange.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					“Strange?” I say.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan" onclick="progText('d7')">
+					“No matter,” the kabocha says, “you must take me over there. Up on the hill. We are almost there.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d7">
+				<a href="{% url 'produce:hypertext_individual' '310' %}">
+					I carry it to the hill.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+
+	sessionStorage.lie = "no";
+
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

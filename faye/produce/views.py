@@ -39,3 +39,9 @@ def visual_individual(request, produce_id):
 	cited_works   = visual_object.cited_works.all()
 
 	return render(request, 'produce/individual_visual.html', {'visual_object': visual_object, 'cited_works' : cited_works})
+
+def hypertext_individual(request, hypertext_id):
+
+	def_str = 'produce/hypertext_files/ht_%s.html'%(hypertext_id)
+
+	return render(request, def_str, {})

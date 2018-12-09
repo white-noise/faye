@@ -1,0 +1,70 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					I am at a loss. And even though I am in a forest I feel surrounded by nothing alive. The kabocha feels incredibly far away.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					But I remember the lemon soda, so long ago now. I check the coat pocket and it is still there, almost finished. I ask you if you will accept the soda.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					You begin to talk of summer, its heat and brightness, up there in your cold dark tree. Of your childhood taking lemons from your family’s trees and biting into them. You talk of buying me the soda in the city because it was easier, because you could grow no lemons to bite, and the supermarket’s were pale and waxy. How you worried that I would find out one day that you did this, and that I would love you less for not being able to provide.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					You are lost in your memories. I think to comfort you.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					But instead I interrupt you to ask politely to leave.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					I offer the seed to you, and you accept it. You begin to talk about our garden, but I know it is both you and not you. I also know that, when you are lost in memory, it means I have given you what was required. You pine for days passed.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<a href="{% url 'produce:hypertext_individual' '42' %}">
+					And like all ghosts, you keep your promises.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

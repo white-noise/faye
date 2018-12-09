@@ -1,0 +1,70 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/night_city.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					I pass under a small highway, vaulted above me on concrete pillars covered in tiny, square, white tiles. Inbetween the tiles there is some rust, from the bolts that join the old two-lane together, built for the olympics that weren’t even held here.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					I pass over a bridge and wait for a while as the swollen canal carries bits of wood and leaves toward the bay. If I waited long enough, an entire tree might be washed away like this. In the summer, the water runs clear, and even at night you can almost see the bottom of the canal. You told me this was the only town you had ever lived in with a canal like this. That your hometown canal was dirty, with concrete walls riddled with large black craggy stones.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					I pass a community center where on Sunday mornings the oldest people I have ever seen sit in their wheelchairs outside the vestibule and talk to one another.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					I pass a printing shop with all its lights off but with twenty copiers blinking small green and red LEDs through the leaded plate glass windows. They are like children sleeping.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					I pass a closed brick building. It is covered in warning tape. It is overgrown with flowers.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					I walk a mile.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<a href="{% url 'produce:hypertext_individual' '06' %}">
+					I have walked two miles.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

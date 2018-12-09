@@ -1,0 +1,65 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/soda.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					I’m not ready to keep going where I’ve been leading myself, as funny as that sounds. I see a vending machine, down the alley, and decide to walk to it. Soda still calms me, even though you don’t buy it for me anymore.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					It is the only truly lighted thing around. The sodium yellow streetlamps barely illuminate themselves. The light of the vending machine is cold blue and radiant against the night. Plastic models of all the drinks for sale are arrayed behind clear plastic.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					I choose lemon soda. November isn’t the time to be drinking lemon soda, but I don’t care.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					I drink half, and then put the bottle in the pocket of my large coat.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					I feel the bottle hit something. I take it out.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<a href="{% url 'produce:hypertext_individual' '16a' %}">
+					It’s a tape player, Walkman brand. I place the bottle back into my coat pocket, grasping the new object, and walk back to the street.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

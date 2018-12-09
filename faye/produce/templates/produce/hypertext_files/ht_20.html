@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					Standing here makes me feel like a child. So does wearing this big coat.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					I remember the Walkman and take it out. It is worn around its edges, which flare a dull silver. It used to be that everyone had one of these, but in the past couple of years people have moved onto CDs, or flash memory. Everything is getting smaller; I have no idea what to make of that. People cling so closely to their favorite things, and then before you know it, they’re disappearing in your hands—I don’t even feel that old.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					There’s a tape in the Walkman. I press the power button. A light.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<a href="{% url 'produce:hypertext_individual' '21' %}">I press play. </a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

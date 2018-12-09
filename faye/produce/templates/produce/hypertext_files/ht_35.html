@@ -1,0 +1,125 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					I feel a little embarrassed to listen to a story about a pumpkin being eaten, but then again, that is sort of what they are for. I say nothing.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					“Was it a good recording?” the kabocha asks me from below my arm.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					I say that it was, although I do not mention the soup. I am beginning to to enjoy our journey, as strange as it is. I tell the kabocha I am going to listen to another recording, and that it should call out if it needs anything.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					I press the play button again, and this time it is only a few seconds before the next segment comes on. It is you reading me a bedtime story—some section of a long winding tale about young people being brave, walking through unknown places. You do all the people in different voices.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					When the chapter is finished, you hold a tape recorder up near my mouth, and record my breathing. I am still awake though, and ask you what you are doing. I must be eight or nine. You tell me you are collecting every piece of me that you can get. I am puzzled, and say that you are just holding a box, and that everything that is me is still there.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					You ask me if I will come with you if you go far away.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan" onclick="progText('d7')">
+					“Where are you going?” I ask.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d7">
+				<span class="progSpan" onclick="progText('d8')">
+					“If I go very far away, you would come with me, wouldn’t you? You would come with your mom?”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d8">
+				<span class="progSpan" onclick="progText('d9')">
+					“But there’s so much to do right here.” I say.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d9">
+				<span class="progSpan" onclick="progText('d10')">
+					“Baby, here is no good. I wish I could show you how good other places could be. Here is no good. I wish I could show you the canals where I grew up. The gardens and fields. The dirt.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d10">
+				<span class="progSpan" onclick="progText('d11')">
+					“Why is here no good?” I ask.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d11">
+				<span class="progSpan" onclick="progText('d12')">
+					“You need to listen to me, baby. Remember how I told you about the canals where I used to live—how they were filled with mud and stones? The canals here are the same, do you see; even if they are not filled with things like we see them, they are. And because we cannot see them. Because we can’t take them, they are dangerous. What if you swallow one, baby? What if you don’t even know it. Do you see? Do you see how things are and are not?”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d12">
+				<span class="progSpan" onclick="progText('d13')">
+					The tape makes a sound that is silence recorded, not the absence of sound.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d13">
+				<span class="progSpan" onclick="progText('d14')">
+					I press stop. I take the headphones off.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d14">
+				<span class="progSpan" onclick="progText('d15')">
+					The kabocha hears me do this and makes a clicking sound—like it has a tongue. I don’t know how it does this. It asks me what the story was about. I don’t have to say, but I would like to hear, it says.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d15">
+				<span class="progSpan" onclick="progText('d16')">
+					I tell it that it was a recording of my mom reading me a story.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d16">
+				<span class="progSpan" onclick="progText('d17')">
+					“Was the story good?” the kabocha asks.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d17">
+				<a href="{% url 'produce:hypertext_individual' '36' %}">
+					“It was just a story,” I say, “Nothing else happened.”
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

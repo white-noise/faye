@@ -1,0 +1,65 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/blank.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					I open my unlocked door and stand in the entryway. Cold air creeps along my back until I close the door behind me, and then it is quieter. No sounds of wind, no sounds of rustling leaves or creaking branches. For all people say about haunted houses, this one was remarkably dead. Nothing stirred. I was like a furnishing in it.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					I ease up the stairs, but they are not especially tricky now, almost welcoming, and my feet find the long carpet of the computer room again. I sink into it a little. I will have no answer when my dad comes asking for his coat.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					I sit down in the chair in front of the computer.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<a href="#" id="switchLink">
+					And find my blank email still waiting for me.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+
+	var y = document.getElementById("switchLink");
+	if(sessionStorage.candle == "0"){
+		y.href = "{% url 'produce:hypertext_individual' '45c' %}";
+	} else if(sessionStorage.candle == "1"){
+		y.href = "{% url 'produce:hypertext_individual' '45b' %}";
+	} else {
+		y.href = "{% url 'produce:hypertext_individual' '45a' %}";
+	}
+
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

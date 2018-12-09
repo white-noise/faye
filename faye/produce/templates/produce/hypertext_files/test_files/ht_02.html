@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/email_screen.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">I’m trying to compose an email to you. And usually this big electronic machine makes me excited, and it feels like I can compose anything. But tonight it feels heavy like a rock. I can talk to anyone in the world, and I’ve got nothing to say.</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">You always said that when you were caught up in something you liked to take a walk. They cleared your head, and helped you focus on what was right in front of you, you said. It sounds so simple; how could it be right?</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">Do you think that we’re distracted, sometimes, by things coming to us immediately, or leaving us at a lightning pace? Like with this big <a href="https://i2.wp.com/vrworld.com/wp-content/uploads/2015/01/necpc98A.jpg?resize=640%2C434" target="_blank">electronic thing</a>? In some ways it feels like it doesn’t matter, but in another sense I want to know if it makes things different. It certainly feels like it could be.</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">Anyway, none of this is good for an email. Gotta abandon the whole thing.</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<a href="{% url 'produce:hypertext_individual' '03' %}">So I go for a walk.</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}

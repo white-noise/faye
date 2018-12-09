@@ -1,0 +1,123 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="info_text">
+		{% load static %}		
+		<img src="{% static 'produce/ht_images/pumpkin_flash.gif' %}" class="ht_img">	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<div class="ht_info_text" id="d0">
+				<span class="progSpan" onclick="progText('d1')">
+					“You have been relatively honest with me, or at least showed interest in my life, strange as though it is,” says the kabocha.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d1">
+				<span class="progSpan" onclick="progText('d2')">
+					“I am sorry if I have not been a complete friend to you,” I say.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d2">
+				<span class="progSpan" onclick="progText('d3')">
+					“You should leave here soon—it is not a place that people should stay long, especially when they are young.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d3">
+				<span class="progSpan" onclick="progText('d4')">
+					“What do I do?” I ask.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d4">
+				<span class="progSpan" onclick="progText('d5')">
+					“Because of your friendliness, I can offer you advice, and an object to help you leave. First, I must ask you to leave the tape recorder with me.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d5">
+				<span class="progSpan" onclick="progText('d6')">
+					“Why would I do that?” I ask.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d6">
+				<span class="progSpan" onclick="progText('d7')">
+					“Do you think it plays the truth?”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d7">
+				<span class="progSpan" onclick="progText('d8')">
+					“What does it matter what the truth is, kabocha?”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d8">
+				<span class="progSpan" onclick="progText('d9')">
+					“Now that is a much better question. And shows how simultaneously important and irrelevant the tape is. It is because the question is painful that I ask for it—there are larger pains yet to come. I cannot say more.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d9">
+				<span class="progSpan" onclick="progText('d10')">
+					I think. And I believe the kabocha. However strange this place is, I believe it.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d10">
+				<span class="progSpan" onclick="progText('d11')">
+					I place the recorder, taking the headphones for myself, next to the kabocha, so that its hard angles are softened by the waving grass.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d11">
+				<span class="progSpan" onclick="progText('d12')">
+					“I can also offer you one of my candles,” the kabocha says.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d12">
+				<span class="progSpan" onclick="progText('d13')">
+					I do not know what to say. I ask if that will harm it.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d13">
+				<span class="progSpan" onclick="progText('d14')">
+					“I am made of empty space and light, child,” the kabocha says, “I am barely whole, and am made to he remade. Hollowed out to become whole. Come over and take off my lid—there, pull at the stem.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d14">
+				<span class="progSpan" onclick="progText('d15')">
+					I carefully reach inside the kabocha and take its left candle, cuppings its wide base in my hands.
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d15">
+				<span class="progSpan" onclick="progText('d16')">
+					“Now go, over to those trees to the left. Shelter my candle, but do not worry if it must go out. I hope it is not a burden but a comfort to you—remember that my other eye burns here.”
+				</span>
+			</div>
+			<div class="ht_info_text hidden" id="d16">
+				<a href="{% url 'produce:hypertext_individual' '40b' %}">
+					I say goodbye, and begin to walk.
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:index' %}">back to home</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+<script>
+
+	sessionStorage.candle = "1";
+
+	function progText(div_id) { 
+		var x = document.getElementById(div_id);
+		x.classList.remove("hidden");
+		x.classList.add("fadeIn");
+	}
+</script>
+
+{% endblock %}
