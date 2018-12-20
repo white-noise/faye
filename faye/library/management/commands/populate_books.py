@@ -11,6 +11,9 @@ class Command(BaseCommand):
 
 	def _populate(self):
 
+		# deletes previous library entries in the table, if uncommented
+		# LibraryObject.objects.all().delete()
+
 		# use path as according to manage.py
 		json_data = open("library/static/library/json/scrubbed_data.json").read()
 		json_obj  = json.loads(json_data)
