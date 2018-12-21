@@ -1,4 +1,4 @@
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.template import loader
 from django.shortcuts import render, get_object_or_404
 from .models import LibraryObject
@@ -20,3 +20,14 @@ def individual(request, library_id):
 
 	book = get_object_or_404(LibraryObject, pk=library_id)
 	return render(request, 'library/individual_library.html', {'book': book})
+
+def back(request):
+
+	# return user to the page of reference (to keep pages returns neat)
+	# try to capture the edge case for no access to referer
+
+	return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+def guide(request):
+
+	return render(request, 'library/library_intro.html')

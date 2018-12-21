@@ -1,0 +1,74 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="sub-heading">
+		<h2>
+			<a href="{% url 'library:index' %}">< </a>guide to the library
+		</h2>
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<p>
+				Current books I am reading and what I think about them:
+			</p>
+			<p>
+				<li>Joan Didion, <em>(Various titles)</em>: 
+					<span>
+						I'm reading from this oeuvre because I want a little more on the flavor of California in a time before I lived there—i.e., the time that left stuff like the original interior design of my childhood home, or the local library I grew up with, or the towns I drove past and through on many family trips to newer and less confused places. It's sort of self-centered, but as long as you realize that...
+					</span>
+				</li>
+				<li>Yukio Mishima, <em>Forbidden Colors</em>: 
+					<span>
+						I'm re-reading this one, just for its portrait of youth, reversals on top of reversals, and solid descriptions of everything sartorial. One of the better books by him because ironically covers a little less of the cosmogony that runs through his four-part 'Spring Snow' series.
+					</span>
+				</li>
+				<li>
+					Roberto Bolaño, <em>2666</em>: 
+					<span>
+						I've been reading this forever and I hope that I like it because of its intricate plot and unmatched ambition, but I fear that I really like it because it speaks to some academic fantasyland where days are idle and danger is always already sexy.
+					</span>
+				</li>
+			</p>
+			<hr>
+			<p>
+				This so-called library is really a paginated list of all the books I currently own (barring a few whose lack of ISBN mean I have yet to enter them manually). They are organized by first author last name, although I have a lot more meta-data (genre, publisher, price, links to thumbnails, etc.) on each of them, meaning more interesting grouping might eventually be implemented.
+			</p>
+			<p>
+				Currently each title links to a page with a description of the book (sometimes brief, sometimes diatribey). Each book is also an object able to be referenced by stories, images, statuses, and in theory any other relevant piece of media on the site. Hopefully these references are resilient to annihilation and creation of book objects: they should be.
+			</p>
+			<p>
+				I like the thinginess of books. I like how I remember where I got each of my books (and am doing my best by merit of this database to hold on to that information).
+			</p>
+			<p>
+				Francis Ponge gets at it well enough in his "My Creative Method" that I just happen to have been sent recently: "Ideas demand my assent, insist on it, and it is too easy for me to give in: this gift, this agreeableness, gives me no pleasure, but rather a certain revulsion, nausea. Objects, landscapes, events, people around give me a great deal of pleasure on the other hand. They convince me. By the very fact they don’t need to."
+			</p>
+			<p>
+				So hopefully this library is less a testament to the ideas than their encapsulating form and long history in getting to me, and being taken into my head. This is not the only way to think of them, but it's one that this site exemplifies, and which makes the most sense on a winter night like this.
+			</p>
+			<p>
+				It's all pretty simple thinking, but also very comforting. Boring but also fine. There is no correct way or definite reason to look through these books. No systematic way by which I will update and make known the update of their meager and sometimes tongue-in-cheek descriptions.
+			</p>
+			<p>
+				If you have books you want to give me, books that I'm overdue in returning to you, or suggestions for things that ought to be on the list, drop me a <a href="mailto:pedalferrous@gmail.com">line</a>.
+			</p>
+			<p style="text-align:right;">
+				<em>(Written Dec. 20, 2018.)</em>
+			</p>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'library:index' %}">back</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+{% endblock %}

@@ -13,6 +13,16 @@
 		</h2>
 	</div>
 
+	{% if page_library.number == 1 %}
+		<div class="sub-heading">
+			<div class="info">
+				<a href="{% url 'library:guide' %}">
+					Click Here for a Guide to This Library and Some Recent Thoughts About What to Read.
+				</a>
+			</div>
+		</div>
+	{% endif %}
+
 	<div class="sub-heading">
 		<h2>
 			<div class="arrow_nav">
