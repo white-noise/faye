@@ -1,0 +1,60 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="sub-heading">
+		<h2>
+			<a href="{% url 'produce:written' %}">< </a>film & residue
+		</h2>
+	</div>
+
+	<div class="info" style="padding-top: 50px;">
+		{% load static %}		
+		<img src="{% static 'produce/capricorn.gif' %}" >	
+	</div>
+
+	<div class="info" style="padding-top: 50px;">
+		<div class="info_text">
+			<p>
+				One winter night I tried to watch you sleep<br>
+				But folds of darkness knotted in my eyes,<br>
+				Like bitter coffee dried onto a cup,<br>
+				Or clotted thoughts gone cold inside my mind.
+			</p>
+			<p>
+				I couldn’t see your tiny twisted form<br>
+				Or feel your breath upon my ghostly hand.<br>
+				Instead I saw the slatted blinds were worn<br>
+				And dust had coated thick our summer fan.
+			</p>
+			<p>
+				How strange it was that everything but you<br>
+				In sleep acquired features so bizarre.<br>
+				The bed a palm, red lips across the moon,<br>
+				A furrowed face of tangled clouds and stars.
+			</p>
+			<p>
+				How natural, though, that in such perfect dark<br>
+				You were the world, the liquid in my heart.
+			</p>
+			<p style="padding-top: 50px;">
+				<span>
+				(written dec. 23, 2018. happy birthday, my little capricorn.)
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:written' %}">back</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+{% endblock %}

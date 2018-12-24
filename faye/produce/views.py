@@ -39,3 +39,8 @@ def visual_individual(request, produce_id):
 	cited_works   = visual_object.cited_works.all()
 
 	return render(request, 'produce/individual_visual.html', {'visual_object': visual_object, 'cited_works' : cited_works})
+
+
+def capricorn(request):
+
+	return render(request, 'produce/capricorn.html')
