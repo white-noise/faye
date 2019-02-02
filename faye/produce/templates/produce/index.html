@@ -15,7 +15,7 @@
 
 			<div class="info">
 				<li>
-					<a href="{% url 'produce:written' %}">Written</a>
+					<a href="{% url 'produce:written' %}">see all written ></a>
 				</li>
 
 				{% if recent_written %}
@@ -24,14 +24,13 @@
 						<a style="color: #777 ;" href="{% url 'produce:written_individual' recent_written.0.pk %}">
 							{{ recent_written.0.title }}
 						</a>
-						<span>(most recent)</span>
 					<br>
 						<a href="{% url 'produce:written_individual' recent_written.0.pk %}">
 							{{ recent_written.0.description }}
 						</a>
 					</div>
 					<div class="info_text_dark">
-						({{ recent_written.0.pub_date|date:"m/d/y" }})
+						({{ recent_written.0.pub_date|date:"m/d/y" }}: most recent)
 					</div>
 				</li>
 				{% else %}
@@ -40,7 +39,7 @@
 				</li>
 				{% endif %}
 				<li>
-					<a href="{% url 'produce:visual' %}">Visual</a>
+					<a href="{% url 'produce:visual' %}">see all visual ></a>
 				</li>
 
 				{% if recent_visual %}
@@ -49,14 +48,13 @@
 						<a style="color: #777 ;" href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
 							{{ recent_visual.0.title }}
 						</a>
-						<span>(most recent)</span>
 					<br>
 						<a href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
 							{{ recent_visual.0.description }}
 						</a>
 					</div>
 					<div class="info_text_dark">
-						({{ recent_visual.0.pub_date|date:"m/d/y" }})
+						({{ recent_visual.0.pub_date|date:"m/d/y" }}: most recent)
 					</div>
 				</li>
 				{% else %}
