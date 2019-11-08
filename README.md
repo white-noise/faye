@@ -4,14 +4,13 @@
 - including true home buttons in relevant pages
 - enabling smart back-paging (i.e., return to proper page of paginator object)
 - enabling reasonable sorting methods for library contents (i.e., alphabetical by last name, by pub date, by acq date)
-- it might be edifying to include an integrated email form (I don't prefer the idea of comments).
-- actual aesthetic changes to the website (viz. images, lettering)
+- it might be cool to include an integrated email form (I don't prefer the idea of comments)
+- actual aesthetic improvements to the website (viz. images, lettering)
 - use of many to many relations to enable quick intuitive linkages from produce to library
 - specialty pages within the library app with small reviews and ratings (keep minimal: e.g., especially recommended, new)
-- title case should be applied to book titles
+- title case should be applied to book titles...
 - population of books should have its own flush method, always drawing from local json
 - each book field should eventually see some use (e.g., category)
-- uploading my resume, which I seem to have dropped in transit
 
 ### status updates
 - statuses now accept input as safe, and this should support linking and formatting, etc.
@@ -20,10 +19,9 @@
 ### library updates
 - need to bring current collection up to date, remove duplicates, and standardize json loading process
 - flush and repopulate flow can be improved, along with selective templates for when fields are unused or unknown
-- changes should only be made to the json file!
+- changes should only be made to the json file! this is the ideal schema
 
 ### produce updates
-- the format on the written and visual landing page can be changed to look a little cleaner (maybe float recent tag, remove date)
 - possibly meta-commentary on stories should be allowed (far future). descriptions suffice for now
 - enable sorting by different keys (keep it minimal and static; paginated?: no searching: people should be subjected)
 
@@ -44,6 +42,6 @@
 - hosting currently moves key elsewhere and uses let's encrypt and certbot for https
 - commands for my own memory: `sudo supervisorctl restart faye` (or `reread` or `update` or `status`), `sudo service nginx restart`
 - files for server care and upkeep include `/etc/supervisor/conf.d/faye.conf` and `gunicorn_start` and some linking in `/etc/nginx/...`
-- currently https is not enabled nor supported, and domain has not been pointed to the proper url
+- https is currently supported (keep an eye on hook used by cron tab program for 90 day updates)
 - when pulled, static files should be collected by `python3 manage.py collectstatic`
 - when reloading the library `python3 manage.py flush` followed by `createsuperuser` and `populate_books`

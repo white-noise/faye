@@ -17,7 +17,7 @@ a {
 	/*-webkit-transition: all 0.5s;*/
 	/*-moz-transition: all 0.5s;*/
 	/*transition: all 0.5s;*/
-	color: #333;
+	color: #444;
 	text-decoration: none;
 }
 
@@ -35,7 +35,7 @@ span {
 	/*-webkit-transition: all 0.5s;*/
 	/*-moz-transition: all 0.5s;*/
 	/*transition: all 0.5s;*/
-	color: #333;
+	color: #444;
 }
 
 span:hover {
@@ -194,6 +194,7 @@ hr {
 }
 
 .float_text {
+	padding-top: 0.5em;
 	width: 100%;
 	float: left;
 }

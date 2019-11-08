@@ -17,7 +17,7 @@ a {
 	/*-webkit-transition: all 0.5s;*/
 	/*-moz-transition: all 0.5s;*/
 	/*transition: all 0.5s;*/
-	color: #333;
+	color: #444;
 	text-decoration: none;
 }
 
@@ -35,7 +35,7 @@ span {
 	/*-webkit-transition: all 0.5s;*/
 	/*-moz-transition: all 0.5s;*/
 	/*transition: all 0.5s;*/
-	color: #333;
+	color: #444;
 }
 
 span:hover {
@@ -151,7 +151,6 @@ hr {
 	padding-left: 50px;
 }
 
-
 .info {
 	color: #777;
 	margin: auto;
@@ -192,16 +191,17 @@ hr {
 }
 
 .float_title {
-	color: #777 !important;
+	color: #999 !important;
 	padding-bottom: 0.5em;
 }
 
 .float_title > a {
-	color: #777 !important;
+	color: #999 !important;
 }
 
 .float_text {
-	width: 350px;
+	padding-top: 0.5em;
+	width: 300px;
 	float: left;
 }
 

@@ -21,7 +21,7 @@
 				{% if recent_written %}
 				<li class="indented"> 
 					<div class="info_text">
-						<a style="color: #777 ;" href="{% url 'produce:written_individual' recent_written.0.pk %}">
+						<a class="float_title" href="{% url 'produce:written_individual' recent_written.0.pk %}">
 							{{ recent_written.0.title }}
 						</a>
 					<br>
@@ -45,7 +45,7 @@
 				{% if recent_visual %}
 				<li class="indented"> 
 					<div class="info_text">
-						<a style="color: #777 ;" href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
+						<a class="float_title" href="{% url 'produce:visual_individual' recent_visual.0.pk %}">
 							{{ recent_visual.0.title }}
 						</a>
 					<br>
