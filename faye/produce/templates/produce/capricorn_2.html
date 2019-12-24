@@ -1,0 +1,56 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="sub-heading">
+		<h2>
+			<a href="{% url 'produce:written' %}">< </a>secure transfer
+		</h2>
+	</div>
+
+	<div class="info">
+		{% load static %}		
+		<img class="info_img" src="{% static 'produce/email_image.gif' %}" >	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<p>
+				<span>
+				(written dec. 23, 2019. happy birthday, my little email boi)
+				</span>
+			</p>
+			<p>
+				<span>
+				mQINBFRUAGoBEACuk6ze2V2pZtScf1Ul25N2CX19AeL7sVYwnyrTYuWdG2FmJx4x
+				DLTLVUazp2AEm/JhskulL/7VCZPyg7ynf+o20Tu9/6zUD7p0rnQA2k3Dz+7dKHHh
+				eEsIl5EZyFy1XodhUnEIjel2nGe6f1OO7Dr3UIEQw5JnkZyqMcbLCu9sM2twFyfa
+				a8JNghfjltLJs3/UjJ8ZnGGByMmWxrWQUItMpQjGr99nZf4L+IPxy2i8O8WQewB5
+				<br>
+				<br>
+				[... 312 lines ...]
+				<br>
+				<br>
+				fvfidBGruUYC+mTw7CusaCOQbBuZBiYduFgH8hRW97KLmHn0xzB1FV++KI7syo8q
+				XGo8Un24WP40IT78XjKO=nUop
+				<br>
+				<br>
+				-----END PGP SIGNATURE-----
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:written' %}">back</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+{% endblock %}
