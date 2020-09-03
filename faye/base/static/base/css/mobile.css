@@ -85,11 +85,16 @@ hr {
 }
 
 .eig-logo {
+	/*width: 300px;
+	height: 144px;*/
 	width: 300px;
-	height: 144px;
+	height: 285px;
 	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	background-size: contain;
-	background-image: url("../img/eig.gif");
+	background-image: url("../img/forest.gif");
+	/*background-image: url("../img/eig.gif");*/
 	background-repeat: no-repeat;
 }
 

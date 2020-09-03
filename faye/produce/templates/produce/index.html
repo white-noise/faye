@@ -15,7 +15,26 @@
 
 			<div class="info">
 				<li>
-					<a href="{% url 'produce:written' %}">see all written ></a>
+					<a href="https://scholar.google.com/citations?user=W8_-cSoAAAAJ&hl=en" target="_blank">see all research ></a>
+				</li>
+
+				<li class="indented"> 
+					<div class="info_text">
+						<span class="float_title">
+							the link above is to google scholar.
+						</span>
+					<br>
+						<a href="http://web.mit.edu/~cua/www/quanta/" target="_blank">
+							the research group i work with has its own site with further information.
+						</a>
+					</div>
+					<div class="info_text_dark">
+						(eventually i will provide links to written expositions of research problems.)
+					</div>
+				</li>
+
+				<li>
+					<a href="{% url 'produce:written' %}">see all fiction ></a>
 				</li>
 
 				{% if recent_written %}
@@ -39,7 +58,7 @@
 				</li>
 				{% endif %}
 				<li>
-					<a href="{% url 'produce:visual' %}">see all visual ></a>
+					<a href="{% url 'produce:visual' %}">see all visual art ></a>
 				</li>
 
 				{% if recent_visual %}
