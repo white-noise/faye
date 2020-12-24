@@ -12,4 +12,5 @@ urlpatterns = [
 	path("visual/<int:produce_id>/", views.visual_individual, name="visual_individual"),
 	path("written/capricorn/", views.capricorn, name="capricorn"),
 	path("written/email_view/", views.email_view, name="email_view"),
+	path("written/ghost_view/", views.ghost_view, name="ghost_view"),
 ]

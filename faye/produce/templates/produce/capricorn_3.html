@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="sub-heading">
+		<h2>
+			<a href="{% url 'produce:written' %}">< </a>everyday séance
+		</h2>
+	</div>
+
+	<div class="info">
+		{% load static %}		
+		<img class="info_img" src="{% static 'produce/2020_pome.gif' %}" >	
+	</div>
+
+	<div class="info">
+		<div class="info_text">
+			<p>
+				<span>
+				(written dec. 23, 2020. happy birthday; promise me you'll haunt me for a while still)
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:written' %}">back</a>
+	</div>
+	<div class="footer">
+		zane marius rossi 2016
+	</div>
+
+{% endblock %}

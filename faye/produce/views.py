@@ -47,3 +47,7 @@ def capricorn(request):
 def email_view(request):
 
 	return render(request, 'produce/capricorn_2.html')
+
+def ghost_view(request):
+
+	return render(request, 'produce/capricorn_3.html')
