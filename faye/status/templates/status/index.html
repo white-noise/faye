@@ -67,8 +67,6 @@
 								</span>
 								<br>
 								<span>
-									<!-- can also supply abbreviated text for display (passed in view) -->
-									<!-- i.e., a conditional for if the entire text is displayed or no -->
 									<a href="{% url 'status:individual' status.id %}">
 										{{ status.description }}
 									</a>
@@ -76,7 +74,7 @@
 							</li>
 						</div>
 						<div class="float_date">
-							{{ status.pub_date|date:"m/d/y (H:i)" }}
+							{{ status.pub_date|date:"m/d/y" }}
 						</div>
 					{% endfor %}
 					<div style="clear: both;"></div>

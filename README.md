@@ -1,5 +1,13 @@
 # project faye
 
+## major modifications planned
+- additional property for status posts that indicate whether they are writing or research focused, with easy (perhaps colored) indicator
+- use of the subsection marker where appropriate
+- consistent use of color, indentation, rules, and arrows
+- cleaner date/posting indication for writing
+- paring down library subsection to include only a small selection of books with longer inclusions/attached information
+- 
+
 ## next steps (general)
 - including true home buttons in relevant pages
 - enabling smart back-paging (i.e., return to proper page of paginator object)
