@@ -21,7 +21,7 @@ load_dotenv(ENV_PATH)
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.pedalferrous.com', 'pedalferrous.com', '178.128.13.41']
 

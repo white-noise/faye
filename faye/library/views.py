@@ -27,7 +27,3 @@ def back(request):
 	# try to capture the edge case for no access to referer
 
 	return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
-
-def guide(request):
-
-	return render(request, 'library/library_intro.html')

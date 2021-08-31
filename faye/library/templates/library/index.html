@@ -16,9 +16,7 @@
 	{% if page_library.number == 1 %}
 		<div class="sub-heading">
 			<div class="info">
-				<a href="{% url 'library:guide' %}">
-					click here for a guide to this library and some recent thoughts about what to read.
-				</a>
+				<p>this is a list of owned books & comments, if you would like to follow along.</p>
 			</div>
 		</div>
 	{% endif %}
@@ -83,9 +81,6 @@
 						</span>
 					</li>
 				</div>
-				<div class="float_date">
-					{{ book.pub_date|date:"(Y)" }}
-				</div>
 			{% endfor %}
 			<div style="clear: both;"></div>
 		{% else %}
@@ -139,7 +134,7 @@
 	<div class="nav">
 		<a href="{% url 'base:index' %}">back</a>
 		<span class="page_num">
-			({{ page_library.number }}/{{ page_library.paginator.num_pages }})
+			page {{ page_library.number }} of {{ page_library.paginator.num_pages }}
 		</span>
 	</div>
 	<div class="footer">

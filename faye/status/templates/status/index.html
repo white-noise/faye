@@ -9,17 +9,9 @@
 
 			<div class="sub-heading">
 				<h2>
-					<a href="{% url 'base:index' %}">< </a>updates
+					<a href="{% url 'base:index' %}">< </a>notes
 				</h2>
 			</div>
-
-			{% if recent_status.number == 1 %}
-				<div class="sub-heading">
-					<div class="info">
-						<span>these are short entries written on topics unrelated to a central theme.</span>
-					</div>
-				</div>
-			{% endif %}
 
 			<div class="sub-heading">
 				<h2>
@@ -90,7 +82,7 @@
 					<div style="clear: both;"></div>
 				{% else %}
 					<!-- edge case -->
-					<p>No updates are available.</p>
+					<p>No notes are available.</p>
 				{% endif %}
 			</div>
 
@@ -139,11 +131,8 @@
 			<div class="nav">
 				<a href="{% url 'base:index' %}">back</a>
 				<span class="page_num">
-					({{ recent_status.number }}/{{ recent_status.paginator.num_pages }})
+					page {{ recent_status.number }} of {{ recent_status.paginator.num_pages }}
 				</span>
-			</div>
-			<div class="footer">
-				zane marius rossi 2016
 			</div>
 
 {% endblock %}

@@ -7,9 +7,6 @@ def index(request):
 def about(request):
 	return render(request, 'base/about.html')
 
-def contact(request):
-	return render(request, 'base/contact_list.html')
-
 def cv(request):
 	try:
 		return FileResponse(open('static/base/img/zane_rossi_cv.pdf', 'rb'), content_type='application/pdf')

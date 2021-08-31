@@ -46,8 +46,8 @@ span:hover {
 }
 
 hr {
-	border-color: #333;
-	color: #333;
+	border-color: #444;
+	color: #444;
 	width: 500px;
 }
 
@@ -74,8 +74,8 @@ hr {
 
 .eig-hr {
 	width: 500px;
-	border-color: #333;
-	color: #333;
+	border-color: #444;
+	color: #444;
 }
 
 .eig-main {
@@ -107,7 +107,7 @@ hr {
 	bottom: 10px;
 	right: 10px;
 	font-size: 10px;
-	color: #333;
+	color: #444;
 }
 
 .wrapper {
@@ -152,7 +152,7 @@ hr {
 }
 
 .page_num {
-	color: #333 !important;
+	color: #444 !important;
 	padding-left: 50px;
 }
 
@@ -192,16 +192,16 @@ hr {
 	bottom: 10px;
 	right: 10px;
 	font-size: 10px;
-	color: #333;
+	color: #444;
 }
 
 .float_title {
-	color: #999 !important;
+	color: #AAA !important;
 	padding-bottom: 0.5em;
 }
 
 .float_title > a {
-	color: #999 !important;
+	color: #AAA !important;
 }
 
 .float_text {
@@ -223,7 +223,7 @@ hr {
 }
 
 .info_text_dark {
-	color: #333;
+	color: #444;
 	padding-bottom: 0.5em;
 }
 
