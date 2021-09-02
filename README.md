@@ -1,12 +1,12 @@
 # project faye
 
 ## major modifications planned
-- additional property for status posts that indicate whether they are writing or research focused, with easy (perhaps colored) indicator
+- additional property for status posts that indicate whether they are writing or research focused, with easy (perhaps colored) indicator; using enumeration sub-classes and a choices field should be the best way to do this, with opportunities available to later expand the relevant data types
+- what remains is how to select and test for this choice property within a form
 - use of the subsection marker where appropriate
 - consistent use of color, indentation, rules, and arrows
 - cleaner date/posting indication for writing
 - paring down library subsection to include only a small selection of books with longer inclusions/attached information
-- 
 
 ## next steps (general)
 - including true home buttons in relevant pages

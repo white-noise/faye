@@ -267,6 +267,18 @@ hr {
   transition: visibility 0s linear 0s, opacity 300ms;
 }
 
+.l_status {
+  color: #F00 !important;
+}
+
+.t_status {
+  color: #0F0 !important;
+}
+
+.n_status {
+  color: #00F !important;
+}
+
 /*.visible {
   visibility: visible;
   opacity: 1;

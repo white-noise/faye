@@ -13,6 +13,14 @@
 				</h2>
 			</div>
 
+			{% if recent_status.number == 1 %}
+				<div class="sub-heading">
+					<div class="info">
+						<p>this is a series of notes, split between <span class="n_status">neutral</span> topics, <span class="l_status">literature</span> & media, and short <span class="t_status">technical</span> expositions.</p>
+					</div>
+				</div>
+			{% endif %}
+
 			<div class="sub-heading">
 				<h2>
 					<div class="arrow_nav">
@@ -22,16 +30,16 @@
 							<a href="?page={{ recent_status.previous_page_number }}">< </a>
 						</div>
 						<div class="arrow_nav_r">
-							<a href="#"> ></a>
-							<a href="#"> >></a>
+							<a href=""> ></a>
+							<a href=""> >></a>
 						</div>
 						<div style="clear: both;"></div>
 					{% endif %}
 
 					{% if recent_status.has_next and not recent_status.has_previous %}
 						<div class="arrow_nav_l">
-							<a href="#"><< </a>
-							<a href="#">< </a>
+							<a href=""><< </a>
+							<a href="">< </a>
 						</div>
 						<div class="arrow_nav_r">
 							<a href="?page={{ recent_status.next_page_number }}"> ></a>
@@ -67,7 +75,7 @@
 								</span>
 								<br>
 								<span>
-									<a href="{% url 'status:individual' status.id %}">
+									<a href="{% url 'status:individual' status.id %}" class="{% if status.status_type == 'L' %}l_status{% elif status.status_type == 'T' %}t_status{% else %}n_status{% endif %}">
 										{{ status.description }}
 									</a>
 								</span>
@@ -101,8 +109,8 @@
 
 					{% if recent_status.has_next and not recent_status.has_previous %}
 						<div class="arrow_nav_l">
-							<a href="#"><< </a>
-							<a href="#">< </a>
+							<a href=""><< </a>
+							<a href="">< </a>
 						</div>
 						<div class="arrow_nav_r">
 							<a href="?page={{ recent_status.next_page_number }}"> ></a>
