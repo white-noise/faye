@@ -268,15 +268,15 @@ hr {
 }
 
 .l_status {
-  color: #F00 !important;
+  color: #74b0f8;
 }
 
 .t_status {
-  color: #0F0 !important;
+  color: #f87a74;
 }
 
 .n_status {
-  color: #00F !important;
+  color: #8cc05f;
 }
 
 /*.visible {

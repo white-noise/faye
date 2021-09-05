@@ -7,6 +7,8 @@
 - consistent use of color, indentation, rules, and arrows
 - cleaner date/posting indication for writing
 - paring down library subsection to include only a small selection of books with longer inclusions/attached information
+- Should we allow for some flag for whether an article is displayed or not? If logged in, we could allow for viewing, but also maybe we can keep things pretty casual
+- Embedded images in posts could be fun, but would involve modifying the body of the post object with a secondary model
 
 ## next steps (general)
 - including true home buttons in relevant pages

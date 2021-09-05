@@ -24,7 +24,7 @@ class StatusObject(models.Model):
 
     status_title = models.CharField(max_length=200, default="update")
     description  = models.CharField(max_length=500, default="no description")
-    status_text  = models.TextField(max_length=5000, default="There is no text.")
+    status_text  = models.TextField(max_length=10000, default="There is no text.")
     pub_date     = models.DateTimeField('date published', default=timezone.now)
 
     cited_works  = models.ManyToManyField('library.LibraryObject', blank=True)
