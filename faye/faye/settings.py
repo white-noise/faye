@@ -23,7 +23,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.pedalferrous.com', 'pedalferrous.com', '178.128.13.41']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.pedalferrous.com', 'pedalferrous.com', '192.241.148.142']
 
 
 # Application definition
