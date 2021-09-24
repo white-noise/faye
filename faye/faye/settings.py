@@ -21,7 +21,7 @@ load_dotenv(ENV_PATH)
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.pedalferrous.com', 'pedalferrous.com', '178.128.13.41']
 
@@ -101,6 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

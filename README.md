@@ -47,6 +47,11 @@
 - I need to make sure that the certbot requests are not above the allotted frequency
 - can and should cron on the webserver be used to make periodic pushes?
 
+## notes on virtual environment, gnuicorn, etc.
+- `source venv/bin/activate` to enter into python virtual environment
+- `deactivate` to leave environment
+- we have to update somehow gracefully to django 3.2 from 2.0, which may mean updating how gunicorn serves everything; possibly though this is a cosmetic fix
+
 ## deployment notes (and personal reminders)
 - currently I am being very lax with secret key storage and file transfer protocols. whoops. need to change this if I ever write posts
 - hosting currently moves key elsewhere and uses let's encrypt and certbot for https
