@@ -14,4 +14,5 @@ urlpatterns = [
 	path("written/email_view/", views.email_view, name="email_view"),
 	path("written/ghost_view/", views.ghost_view, name="ghost_view"),
 	path("written/sleep_view/", views.sleep_view, name="sleep_view"),
+	path("written/winter_view/", views.winter_view, name="winter_view"),
 ]

@@ -55,3 +55,7 @@ def ghost_view(request):
 def sleep_view(request):
 
 	return render(request, 'produce/capricorn_4.html')
+
+def winter_view(request):
+
+	return render(request, 'produce/capricorn_5.html')

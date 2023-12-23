@@ -60,3 +60,4 @@
 - https is currently supported (keep an eye on hook used by cron tab program for 90 day updates)
 - when pulled, static files should be collected by `python3 manage.py collectstatic`
 - when reloading the library `python3 manage.py flush` followed by `createsuperuser` and `populate_books`
+- `sudo systemctl restart gunicorn` and `sudo systemctl restart nginx`, `sudo systemctl daemon-reload`

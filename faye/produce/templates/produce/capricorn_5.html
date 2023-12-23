@@ -1,0 +1,59 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+	<div class="heading">
+		<div class="sub-heading">
+		</div>
+	</div>
+
+	<div class="sub-heading">
+		<h2>
+			<a href="{% url 'produce:written' %}">< </a>December 23, 2023.
+		</h2>
+	</div>
+
+	<!-- <div class="info" style="padding-top: 50px;">
+		{% load static %}		
+		<img class="info_img" src="{% static 'produce/pome_23.jpg' %}" >	
+	</div> -->
+
+	<!-- if you're reading this then you should know you are (1) thorough and (2) loved by me, a lot. -z -->
+
+	<div class="info" style="padding-top: 50px;">
+		<div class="info_text">
+			<p>
+				December 23, 2023.
+			</p>
+			<p>
+				It’s too warm this morning, even before <br>
+				The sun makes low transit across the Midwest sky.<br>
+				Such mellow catastrophe, laid across my forehead<br>
+				Like a kiss, or a poultice meant for the very ill.<br><br>
+
+				It upsets something in the jelly of my eyes,<br>
+				Slowing the solidification of sleep’s fluids,<br>
+				Leaving me time to think, stunned by blindness,<br>
+				Of your spoon-shaped ear and morning voice.<br><br>
+
+				Something devastating in the barometry of it all,<br>
+				In the beautiful warm winter, sick as a dog.<br>
+				Night comes so early that sleep is now one room in<br>
+				A very large house. I am so embarrassed to wake you.<br><br>
+
+				But I do, and you stretch; you drink your cool water.<br>
+				You open the window so the cat might smell the air.<br>
+			</p>
+			<p style="padding-top: 30px;">
+				<span>
+				(happy birthday; i like knowing you.)
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="nav">
+		<a href="{% url 'produce:written' %}">back</a>
+	</div>
+
+{% endblock %}
