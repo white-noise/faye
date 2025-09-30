@@ -18,9 +18,9 @@
 					<a href="https://scholar.google.com/citations?user=W8_-cSoAAAAJ&hl=en" target="_blank"> all research ></a>
 				</li>
 
-				<li class="indented"> 
+				<li class="indented">
 					<div class="info_text">
-						this leads to <a href="https://scholar.google.com/citations?user=W8_-cSoAAAAJ&hl=en" target="_blank">google scholar</a>; see also the <a href="{% url 'status:index' %}">notes</a> subsection.
+						this is my personal site; for my professional site, <a href="https://pedalferrous.github.io/">see here</a>! this link leads to <a href="https://scholar.google.com/citations?user=W8_-cSoAAAAJ&hl=en" target="_blank">google scholar</a>; see also the <a href="{% url 'status:index' %}">notes</a> subsection.
 					</div>
 				</li>
 
@@ -29,7 +29,7 @@
 				</li>
 
 				{% if recent_written %}
-				<li class="indented"> 
+				<li class="indented">
 					<div class="info_text">
 						<a class="float_title" href="{% url 'produce:written_individual' recent_written.0.pk %}">
 							{{ recent_written.0.title }}
@@ -47,7 +47,7 @@
 					There is nothing here.
 				</li>
 				{% endif %}
-				
+
 			</div>
 
 			<div class="nav">
